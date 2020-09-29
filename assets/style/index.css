@@ -1,10 +1,10 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 
 /* 공통영역 */
 * {
-  color: #555;
-  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+  font-family: "Noto Sans KR", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -25,6 +25,7 @@ header#header {
 
 div#header_top {
   width: 1050px;
+  height: 40px;
   /* border: 1px solid #000; */
   padding-top: 8px;
   margin: 0 auto;
@@ -47,11 +48,10 @@ nav#header_lnb ul#user_lnb > li > a {
 }
 
 /* list  "|" 삽입*/
- li.menu::after {
-color: #ddd;
-content: "|"
+li.menu::after {
+  color: #ddd;
+  content: "|";
 }
-
 
 nav#header_lnb ul#user_lnb > li:first-child > a {
   color: #5f0080;
@@ -64,67 +64,80 @@ nav#header_lnb ul#user_lnb > li span {
 }
 
 ul#user_lnb ul#user_lnbSub {
-    border: 1px solid #ddd;
-    background-color: #fff;
-    position: absolute;
-    top: 42px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  position: absolute;
+  top: 42px;
   display: none;
+  z-index: 1;
 }
 
-ul#user_lnb ul#user_lnbSub>li {
+ul#user_lnb ul#user_lnbSub > li {
   padding: 3px 10px;
 }
 
 div#headerLogo {
   width: 1050px;
+  height: 60px;
   text-align: center;
   /* border: 1px solid #000; */
   margin: 0 auto;
+  position: relative;
+  top: -20px;
+
+  z-index: -1;
 }
 
 /* gnb Menu */
 
 div#gnbArea {
   width: 1050px;
-  height: 50px;
-
+  height: 60px;
+  /* border: 1px solid #000; */
   margin: 0 auto;
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
-#gnb_main>ul {
-  display:flex;
+#gnb_main > ul {
+  display: flex;
 }
 
-#gnb_main>ul a {
+#gnb_main > ul a {
   width: 140px;
   height: 50px;
   font-size: 17px;
   line-height: 50px;
   font-weight: bold;
   text-align: center;
-  /* border: 1px solid #000; */
   display: inline-block;
 }
 
-#gnb_main>ul>li:first-child > a {
+#gnb_main > ul > li:first-child > a {
   width: 160px;
 }
+
+#gnb_main > ul > li:not(:first-child) > a:hover {
+  /* border-bottom: 1px solid #000; */
+  text-decoration: underline 3px solid #5f0080;
+  text-underline-position: under;
+}
+
 /* 전체 카테고리 메뉴 구성*/
-#gnb_main>ul>li>a i {
+#gnb_main > ul > li > a i {
   font-size: 24px;
   position: relative;
   top: 5px;
   left: -10px;
 }
+/* 전체 카테고리 메뉴 */
 
 /* nav#search */
 nav#search {
   width: 280px;
- text-align-last: left;
+  text-align-last: left;
   margin-top: 5px;
-  display:flex;
+  display: flex;
 }
 
 div#search_product {
@@ -135,7 +148,7 @@ div#search_product {
   position: relative;
 }
 
-div#search_product  input {
+div#search_product input {
   height: 30px;
   border: none;
   outline: none;
@@ -143,14 +156,26 @@ div#search_product  input {
   margin: 6px 0 6px 14px;
 }
 
-div#search_product  button {
-  border:none;
+div#search_product button {
+  border: none;
   position: absolute;
   right: 10px;
   bottom: 8px;
 }
 
 div#cart {
-padding: 4px;
-margin-left: 10px;
+  padding: 4px;
+  margin-left: 10px;
+}
+
+/* main slide show */
+div#mainSlide {
+  width: 370px;
+  position: relative;
+}
+
+#mainSlide div#slideFrame_main {
+  width: 100%;
+  display: flex;
+  /* overflow: hidden; */
 }

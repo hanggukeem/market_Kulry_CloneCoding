@@ -12,3 +12,14 @@ $("#lnb_subMenu").mouseout(function () {
     $("#user_lnbSub").css("display", "none");
   });
 });
+
+// main slideshow
+setInterval(fnSlide, 3000);
+
+function fnSlide() {
+  $("#slideFrame_main").animate({ "margin-left": "-1440px" }, 500, function () {
+    $(this).css({ "margin-left": "0" });
+    // 첫 번째 항목 뒤로 이동
+    $("#slideFrame_main>a:first").insertAfter("#slideFrame_main>a:last");
+  });
+}
