@@ -1,0 +1,181 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+/* 공통영역 */
+* {
+  color: #333;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* header영역 */
+header#header {
+  width: 100%;
+}
+
+div#header_top {
+  width: 1050px;
+  height: 40px;
+  /* border: 1px solid #000; */
+  padding-top: 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav#header_lnb ul#user_lnb {
+  font-size: 12px;
+  display: flex;
+}
+
+nav#header_lnb ul#user_lnb > li > a {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  /* border: 1px solid #000; */
+  padding: 0 8px;
+  display: inline-block;
+}
+
+/* list  "|" 삽입*/
+li.menu::after {
+  color: #ddd;
+  content: "|";
+}
+
+nav#header_lnb ul#user_lnb > li:first-child > a {
+  color: #5f0080;
+}
+
+nav#header_lnb ul#user_lnb > li span {
+  color: #bbb;
+  font-size: 13px;
+  display: inline-block;
+}
+
+ul#user_lnb ul#user_lnbSub {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  position: absolute;
+  top: 42px;
+  display: none;
+  z-index: 1;
+}
+
+ul#user_lnb ul#user_lnbSub > li {
+  padding: 3px 10px;
+}
+
+div#headerLogo {
+  width: 1050px;
+  height: 60px;
+  text-align: center;
+  /* border: 1px solid #000; */
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+
+  z-index: -1;
+}
+
+/* gnb Menu */
+
+div#gnbArea {
+  width: 1050px;
+  height: 60px;
+  /* border: 1px solid #000; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#gnb_main > ul {
+  display: flex;
+}
+
+#gnb_main > ul a {
+  width: 140px;
+  height: 50px;
+  font-size: 17px;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+#gnb_main > ul > li:first-child > a {
+  width: 160px;
+}
+
+#gnb_main > ul > li:not(:first-child) > a:hover {
+  /* border-bottom: 1px solid #000; */
+  text-decoration: underline 3px solid #5f0080;
+  text-underline-position: under;
+}
+
+/* 전체 카테고리 메뉴 구성*/
+#gnb_main > ul > li > a i {
+  font-size: 24px;
+  position: relative;
+  top: 5px;
+  left: -10px;
+}
+/* 전체 카테고리 메뉴 */
+
+/* nav#search */
+nav#search {
+  width: 280px;
+  text-align-last: left;
+  margin-top: 5px;
+  display: flex;
+}
+
+div#search_product {
+  width: 230px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #eee;
+  position: relative;
+}
+
+div#search_product input {
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: #eee;
+  margin: 6px 0 6px 14px;
+}
+
+div#search_product button {
+  border: none;
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+
+div#cart {
+  padding: 4px;
+  margin-left: 10px;
+}
+
+/* main slide show */
+div#mainSlide {
+  width: 370px;
+  position: relative;
+}
+
+#mainSlide div#slideFrame_main {
+  width: 100%;
+  display: flex;
+  /* overflow: hidden; */
+}
