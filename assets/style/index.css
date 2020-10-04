@@ -26,7 +26,6 @@ header#header {
 div#header_top {
   width: 1050px;
   height: 40px;
-  /* border: 1px solid #000; */
   padding-top: 8px;
   margin: 0 auto;
   display: flex;
@@ -42,7 +41,6 @@ nav#header_lnb ul#user_lnb > li > a {
   height: 30px;
   line-height: 30px;
   text-align: center;
-  /* border: 1px solid #000; */
   padding: 0 8px;
   display: inline-block;
 }
@@ -93,10 +91,12 @@ div#headerLogo {
 div#gnbArea {
   width: 1050px;
   height: 60px;
-  /* border: 1px solid #000; */
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
+}
+
+div#gnbTop {
+  display: flex;
 }
 
 #gnb_main > ul {
@@ -117,20 +117,21 @@ div#gnbArea {
   width: 160px;
 }
 
-#gnb_main > ul > li:not(:first-child) > a:hover {
+#gnb_main > ul > li:hover > a,
+#gnb_main > ul > li:hover > a > i {
   /* border-bottom: 1px solid #000; */
-  text-decoration: underline 3px solid #5f0080;
-  text-underline-position: under;
+  color: #5f0080;
+  /* text-decoration: underline; */
 }
 
-/* 전체 카테고리 메뉴 구성*/
+/*전체 카테고리 메뉴 아이콘 구성 */
+
 #gnb_main > ul > li > a i {
   font-size: 24px;
   position: relative;
   top: 5px;
   left: -10px;
 }
-/* 전체 카테고리 메뉴 */
 
 /* nav#search */
 nav#search {
@@ -168,9 +169,83 @@ div#cart {
   margin-left: 10px;
 }
 
+/* gnb_subMenu 전체카테고리 */
+div#gnbArea_sub {
+  width: 220px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  position: absolute;
+
+  z-index: 999;
+  display: none;
+}
+
+nav#gnb_sub > ul > li > a {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  /* border: 1px solid #000; */
+  display: inline-flex;
+}
+
+nav#gnb_sub > ul > li:hover > a {
+  color: #5f0080;
+  font-weight: bold;
+  background-color: rgba(151, 151, 151, 0.2);
+}
+
+nav#gnb_sub > ul > li > a > img {
+  padding: 8px;
+}
+
+nav#gnb_sub > ul > li > a > img.icon_on {
+  padding: 8px;
+  display: none;
+}
+
+nav#gnb_sub > ul > li > a > span.sub_title {
+  height: 40px;
+  /* border: 1px solid #000; */
+  display: inline-block;
+}
+
+nav#gnb_sub > ul > li > a:hover > span {
+  color: #5f0080;
+}
+
+#gnb_sub ul.innerGnb_sub {
+  width: 220px;
+  height: 722px;
+  border-right: 1px solid #eee;
+  background-color: #eee;
+
+  position: absolute;
+  top: 0;
+  left: 218px;
+
+  transform: translate(-1px, -1px);
+  z-index: 999;
+  display: none;
+}
+
+#gnb_sub ul.innerGnb_sub li > a {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+#gnb_sub ul.innerGnb_sub li:hover a {
+  color: #5f0080;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* main slide show */
 div#mainSlide {
-  width: 370px;
+  height: 370px;
+  border-top: 1px solid #eee;
   position: relative;
 }
 

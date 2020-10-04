@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="/assets/script/main.js"></script>
+    <script defer src="/assets/script/index.js"></script>
   </head>
 
   <body>
@@ -52,50 +52,445 @@
           /></a>
         </div>
         <!-- div#headerLogo -->
+
+        <!--sticky 시작부분-->
         <div id="gnbArea">
-          <nav id="gnb_main">
-            <ul>
-              <li class="menu">
+          <div id="gnbTop">
+            <nav id="gnb_main">
+              <ul>
+                <li class="menu">
+                  <a href="#"
+                    ><i class="material-icons">&#xe5d2;</i>전체 카테고리</a
+                  >
+                </li>
+                <li class="menu"><a href="#">신상품</a></li>
+                <li class="menu"><a href="#">베스트</a></li>
+                <li class="menu"><a href="#">알뜰쇼핑</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </nav>
+            <!-- nav#gnb_main -->
+            <nav id="search">
+              <div id="search_product">
+                <input type="text" placeholder="추석선물 준비 라스트 오더!" />
+                <button>
+                  <img
+                    src="assets/images/main/magnifying_glass.png"
+                    alt="찾기"
+                    width="18"
+                  />
+                </button>
+              </div>
+              <!-- div#search_product-->
+
+              <div id="cart">
                 <a href="#"
-                  ><i class="material-icons">&#xe5d2;</i>전체 카테고리</a
-                >
-              </li>
-              <li class="menu"><a href="#">신상품</a></li>
-              <li class="menu"><a href="#">베스트</a></li>
-              <li class="menu"><a href="#">알뜰쇼핑</a></li>
-              <li><a href="#">이벤트</a></li>
-            </ul>
-          </nav>
-          <!-- nav#gnb_main -->
-          <nav id="gnb_sub"></nav>
-          <!-- nav#gnb_sub -->
-          <nav id="search">
-            <div id="search_product">
-              <input type="text" placeholder="추석선물 준비 라스트 오더!" />
-              <button>
-                <img
-                  src="assets/images/main/magnifying_glass.png"
-                  alt="찾기"
-                  width="18"
-                />
-              </button>
-            </div>
-            <!-- div#search_product-->
-            <div id="cart">
-              <a href="#"
-                ><img
-                  src="assets/images/main/cart.png"
-                  alt="장바구니"
-                  width="30"
-              /></a>
-            </div>
-            <!--div#cart-->
-          </nav>
+                  ><img
+                    src="assets/images/main/cart.png"
+                    alt="장바구니"
+                    width="30"
+                /></a>
+              </div>
+              <!--div#cart-->
+            </nav>
+          </div>
+          <!--div#gnbTop-->
+          <div id="gnbArea_sub">
+            <nav id="gnb_sub">
+              <ul>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/main/icon/icon01_off.png"
+                      alt="아이콘1"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon01_on.png"
+                      alt="아이콘1_change"
+                      class="icon_on"
+                    />
+                    <span class="sub_title">채소</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">기본채소</a></li>
+                    <li><a href="#">쌈･샐러드･간편채소</a></li>
+                    <li><a href="#">브로콜리･특수채소</a></li>
+                    <li><a href="#">콩나물･버섯류</a></li>
+                    <li><a href="#">시금치･부추･나물</a></li>
+                    <li><a href="#">양파･마늘･생각･파</a></li>
+                    <li><a href="#">파프리카･피망･고추</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon02_off.png"
+                      alt="아이콘2"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon02_on.png"
+                      alt="아이콘2"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">과일・견과・쌀</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">제철과일</a></li>
+                    <li><a href="#">국산과일</a></li>
+                    <li><a href="#">수입과일</a></li>
+                    <li><a href="#">냉동･건과일</a></li>
+                    <li><a href="#">견과류</a></li>
+                    <li><a href="#">쌀･잡곡</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon03_off.png"
+                      alt="아이콘3"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon03_on.png"
+                      alt="아이콘3"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">수산・해산・건어물</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">생선류</a></li>
+                    <li><a href="#">오징어･낙지･문어</a></li>
+                    <li><a href="#">새우･게･랍스터</a></li>
+                    <li><a href="#">해산물･조개류</a></li>
+                    <li><a href="#">수산가공품</a></li>
+                    <li><a href="#">김･미역･해조류</a></li>
+                    <li><a href="#">건어물･다시팩</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon04_off.png"
+                      alt="아이콘4"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon04_on.png"
+                      alt="아이콘4"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">정육・계란</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">소고기</a></li>
+                    <li><a href="#">돼지고기</a></li>
+                    <li><a href="#">계란류</a></li>
+                    <li><a href="#">닭･오리고기</a></li>
+                    <li><a href="#">양념육･돈까스</a></li>
+                    <li><a href="#">양고기</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon05_off.png"
+                      alt="아이콘5"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon05_on.png"
+                      alt="아이콘5"
+                      class="icon_on"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">국・반찬・메인요리</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">국･탕･찌개</a></li>
+                    <li><a href="#">밑반찬</a></li>
+                    <li><a href="#">김치･장아찌･젓갈</a></li>
+                    <li><a href="#">두부･어묵･부침개</a></li>
+                    <li><a href="#">햄･소시지･통조림</a></li>
+                    <li><a href="#">메인요리</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon06_off.png"
+                      alt="아이콘6"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon06_on.png"
+                      alt="아이콘6"
+                      class="icon_on"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">샐러드・간편식</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#"> 샐러드･도시락</a></li>
+                    <li><a href="#">간편식･냉동식품</a></li>
+                    <li><a href="#">선식･시리얼･그래놀라</a></li>
+                    <li><a href="#">만두･튀김･떡볶이</a></li>
+                    <li><a href="#">죽･스프</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon07_off.png"
+                      alt="아이콘7"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon07_on.png"
+                      alt="아이콘7"
+                      class="icon_on"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">면・양념・오일</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">파스타･면류</a></li>
+                    <li><a href="#">밀가루･가루･믹스</a></li>
+                    <li><a href="#">향신료･소스･드레싱</a></li>
+                    <li><a href="#">양념･액젓･장류</a></li>
+                    <li><a href="#">소금･설탕･식초･꿀</a></li>
+                    <li><a href="#">식용유･참기름･오일</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon08_off.png"
+                      alt="아이콘8"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon08_on.png"
+                      alt="아이콘8"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">음료・우유・떡・간식</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">생수･음료･주스</a></li>
+                    <li><a href="#">커피･차</a></li>
+                    <li><a href="#">우유･두유･요거트</a></li>
+                    <li><a href="#">아이스크림</a></li>
+                    <li><a href="#">떡･한과</a></li>
+                    <li><a href="#">간식･과자･쿠키</a></li>
+                    <li><a href="#">초콜릿･젤리･캔디</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon09_off.png"
+                      alt="아이콘9"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon09_on.png"
+                      alt="아이콘9"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">베이커리・치즈・델리</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">식빵･빵류</a></li>
+                    <li><a href="#">잼･버터･스프레드</a></li>
+                    <li><a href="#">케이크･파이･디저트</a></li>
+                    <li><a href="#">치즈</a></li>
+                    <li><a href="#">건조육</a></li>
+                    <li><a href="#">올리브･피클･델리</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon10_off.png"
+                      alt="아이콘10"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon10_on.png"
+                      alt="아이콘10"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">건강식품</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">건강즙･건강음료</a></li>
+                    <li><a href="#">홍삼･인삼･꿀</a></li>
+                    <li><a href="#">영양제</a></li>
+                    <li><a href="#">유산균</a></li>
+                    <li><a href="#">건강분말･건강환</a></li>
+                    <li><a href="#">유아동</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon11_off.png"
+                      alt="아이콘11"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon11_on.png"
+                      alt="아이콘11"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">생활용품・리빙</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">휴지･티슈･위생용품</a></li>
+                    <li><a href="#">세제･청소용품</a></li>
+                    <li><a href="#">화훼･인테리어소품</a></li>
+                    <li><a href="#">의약외품･마스크</a></li>
+                    <li><a href="#">생활잡화･문구</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon12_off.png"
+                      alt="아이콘12"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon12_on.png"
+                      alt="아이콘12"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">뷰티・바디케어</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">스킨케어</a></li>
+                    <li><a href="#">구강･면도</a></li>
+                    <li><a href="#">바디･제모</a></li>
+                    <li><a href="#">헤어케어</a></li>
+                    <li><a href="#">미용기기･소품</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon13_off.png"
+                      alt="아이콘13"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon13_on.png"
+                      alt="아이콘13"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">주방용품</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">주방소모품</a></li>
+                    <li><a href="#">주방･조리도구</a></li>
+                    <li><a href="#">냄비･팬류</a></li>
+                    <li><a href="#">식기류</a></li>
+                    <li><a href="#">컵･와인잔･사케잔</a></li>
+                    <li><a href="#">차･커피도구</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon14_off.png"
+                      alt="아이콘14"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon14_on.png"
+                      alt="아이콘14"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">가전제품</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">주방가전</a></li>
+                    <li><a href="#">생활가전</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon15_off.png"
+                      alt="아이콘15"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon15_on.png"
+                      alt="아이콘15"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">베이비・키즈</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">분유･간편 이유식</a></li>
+                    <li><a href="#">이유식 재료</a></li>
+                    <li><a href="#">유아･어린이 음식</a></li>
+                    <li><a href="#">간식･음료･건강식품</a></li>
+                    <li><a href="#">유아용품･젖병･식기류</a></li>
+                    <li><a href="#">기저귀･물티슈</a></li>
+                    <li><a href="#">목욕･세제･위생용품</a></li>
+                    <li><a href="#">유아스킨･구강케어</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="assets/images/main/icon/icon16_off.png"
+                      alt="아이콘16"
+                      class="icon_off"
+                    />
+                    <img
+                      src="assets/images/main/icon/change/icon16_on.png"
+                      alt="아이콘16"
+                      class="icon_on"
+                    />
+
+                    <span class="sub_title">반려동물</span>
+                  </a>
+                  <ul class="innerGnb_sub">
+                    <li><a href="#">강아지 간식</a></li>
+                    <li><a href="#">강아지 주식</a></li>
+                    <li><a href="#">고양이 간식</a></li>
+                    <li><a href="#">고양이 주식</a></li>
+                    <li><a href="#">반려동물 용품</a></li>
+                    <li><a href="#">배변･위생</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- div#gnbArea_sub-->
         </div>
         <!-- div#gnbArea -->
-        <div id="gnbArea_sub"></div>
-        <!-- div#gnbArea_sub-->
       </header>
+
+      <!-- nav#gnb_sub -->
       <div id="mainSlide">
         <div id="slideFrame_main">
           <a href="#"
