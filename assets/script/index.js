@@ -48,13 +48,26 @@ $("nav#gnb_sub>ul li").mouseout(function () {
   $(this).children("ul.innerGnb_sub").stop().fadeOut();
 });
 
+// nav_GNB sticky 
+window.onscroll = function () { fnGnbSticky() };
+
+let navbar = document.getElementById("gnbArea");
+let sticky = navbar.offsetTop;
+
+function fnGnbSticky() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 // main slideshow
 setInterval(fnSlide, 3000);
 
 function fnSlide() {
-  $("#slideFrame_main").animate({ "margin-left": "-1400px" }, 500, function () {
+  $("#slideFrame_main").animate({ "margin-left": "-100%" }, 500, function () {
     $(this).css({ "margin-left": "0" });
-    // 첫 번째 항목 뒤로 이동
     $("#slideFrame_main>a:first").insertAfter("#slideFrame_main>a:last");
   });
 }

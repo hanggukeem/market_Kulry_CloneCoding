@@ -89,14 +89,18 @@ div#headerLogo {
 /* gnb Menu */
 
 div#gnbArea {
-  width: 1050px;
+  width: 100%;
   height: 60px;
-  margin: 0 auto;
+  background-color: #fff;
   justify-content: space-between;
+  /* position: relative; */
 }
 
 div#gnbTop {
+  width: 1050px;
+  margin: 0 auto;
   display: flex;
+  
 }
 
 #gnb_main > ul {
@@ -105,9 +109,9 @@ div#gnbTop {
 
 #gnb_main > ul a {
   width: 140px;
-  height: 50px;
+  height: 60px;
   font-size: 17px;
-  line-height: 50px;
+  line-height: 60px;
   font-weight: bold;
   text-align: center;
   display: inline-block;
@@ -124,6 +128,15 @@ div#gnbTop {
   /* text-decoration: underline; */
 }
 
+.sticky {
+  width: 100%;
+  margin: 0 auto;
+
+  position: fixed;
+  top: 0;
+}
+
+
 /*전체 카테고리 메뉴 아이콘 구성 */
 
 #gnb_main > ul > li > a i {
@@ -136,6 +149,7 @@ div#gnbTop {
 /* nav#search */
 nav#search {
   width: 280px;
+  line-height: 60px;
   text-align-last: left;
   margin-top: 5px;
   display: flex;
@@ -144,7 +158,9 @@ nav#search {
 div#search_product {
   width: 230px;
   height: 40px;
+  line-height: 40px;
   border-radius: 30px;
+  margin-top: 6px;
   background-color: #eee;
   position: relative;
 }
@@ -171,13 +187,18 @@ div#cart {
 
 /* gnb_subMenu 전체카테고리 */
 div#gnbArea_sub {
+  width: 1050px;
+  margin: 0 auto;
+  position: relative;
+  top: -12px;
+  z-index: 999;
+  display: none;
+}
+
+nav#gnb_sub {
   width: 220px;
   border: 1px solid #eee;
   background-color: #fff;
-  position: absolute;
-
-  z-index: 999;
-  display: none;
 }
 
 nav#gnb_sub > ul > li > a {
@@ -246,11 +267,157 @@ nav#gnb_sub > ul > li > a:hover > span {
 div#mainSlide {
   height: 370px;
   border-top: 1px solid #eee;
+  margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
-#mainSlide div#slideFrame_main {
-  width: 100%;
+#mainSlide div#slideFrame_main{
+height: 370px;
   display: flex;
-  /* overflow: hidden; */
+  justify-content: space-around;
+  position: absolute;
+ 
+}
+
+#mainSlide div#slideFrame_main a {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* main#main */
+main#main {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+section.product_list h1 {
+  font-size: 26px;
+  text-align: center;
+  font-weight: 600;
+  padding: 30px 0;
+}
+
+div.goods_list_container  {
+  width: 1050px;
+}
+
+div.goods_list_container ul {
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+li.goods_list {
+  width: 250px;
+  height: 500px;
+  margin-right: 16px;
+
+}
+
+.goods_list a.zoom_in {
+  width: 250px;
+  height: 320px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* 마우스 hover 했을 때 이미지 확대 애니메이션 */
+.goods_list a img, li.goods_eventList a img {
+  transform: scale(1.0);
+  transition: transform .5s;
+}
+
+li.goods_list a img:hover,
+li.goods_eventList a img:hover,
+li.kurly_recipe a img:hover {
+  transform: scale(1.1);
+  transition: transform .5s;
+}
+
+li.goods_list p {
+  font-size: 16px;
+  padding: 6px 0;
+}
+
+li.goods_list span.goods_price {
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+li.goods_list span.cost_price {
+  color: #ccc;
+  font-size: 14px;
+  /* font-weight: bold; */
+  text-decoration: line-through;
+}
+
+/* section_02 */
+li.goods_eventList a {
+  width: 338px;
+  height: 338px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+li.goods_eventList {
+  text-align: center;
+  padding: 20px 0;
+}
+
+li.goods_eventList h4 {
+  font-size: 17px;
+  padding: 10px 0;
+}
+
+li.goods_eventList p {
+  color: #888;
+}
+
+/* md의 추천 메뉴 버튼 */
+section ul#md_rcm {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section ul#md_rcm li a {
+  height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+
+
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 8px 4px;
+
+  background-color: #f7f7f7;
+  display: inline-block;
+}
+
+section ul#md_rcm li:hover a {
+  color: #5f0080;
+  background-color: #f7f3f8;
+}
+
+.product_list a#new_products p {
+  color: #888888;
+  text-align: center;
+  padding: 10px;
+}
+
+/* 컬리의 레시피 */
+li.kurly_recipe a {
+  width: 338px;
+  height: 225px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+li.kurly_recipe p {
+  text-align: center;
 }
