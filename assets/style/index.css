@@ -10,13 +10,9 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
+a {text-decoration: none;}
 
-ul {
-  list-style: none;
-}
+ul {list-style: none;}
 
 /* header영역 */
 header#header {
@@ -93,14 +89,12 @@ div#gnbArea {
   height: 60px;
   background-color: #fff;
   justify-content: space-between;
-  /* position: relative; */
 }
 
 div#gnbTop {
   width: 1050px;
   margin: 0 auto;
   display: flex;
-  
 }
 
 #gnb_main > ul {
@@ -123,17 +117,17 @@ div#gnbTop {
 
 #gnb_main > ul > li:hover > a,
 #gnb_main > ul > li:hover > a > i {
-  /* border-bottom: 1px solid #000; */
   color: #5f0080;
-  /* text-decoration: underline; */
 }
 
-.sticky {
+.fixed {
   width: 100%;
   margin: 0 auto;
 
   position: fixed;
   top: 0;
+
+  z-index: 999;
 }
 
 
@@ -285,6 +279,30 @@ height: 370px;
   margin: 0 auto;
 }
 
+/* side menu */
+div#quick_lnb {
+  position: absolute;
+  right: 20px;
+  top: 540px;
+}
+
+#quick_lnb ul#quick_menu {
+  width: 80px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+#quick_lnb ul#quick_menu li {
+  height: 30px;
+  line-height: 30px;
+}
+
+#quick_lnb ul#quick_menu li:not(:first-child) {
+  border-top: 1px solid #ddd;
+}
+
 /* main#main */
 main#main {
   width: 1050px;
@@ -411,6 +429,10 @@ section ul#md_rcm li:hover a {
 }
 
 /* 컬리의 레시피 */
+li.kurly_recipe {
+  width: 338px;
+  height: 300px;
+}
 li.kurly_recipe a {
   width: 338px;
   height: 225px;
@@ -420,4 +442,150 @@ li.kurly_recipe a {
 
 li.kurly_recipe p {
   text-align: center;
+}
+
+/* aside footer banner */
+
+aside {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+/* footer */
+footer#footer {
+  width: 1050px;
+  border-bottom: 1px solid #ddd;
+  margin: 20px auto;
+  display: flex;
+}
+
+/* footer 고객센터 */
+#footer div#costomerArea h2 {
+  font-size: 20px;
+  padding: 14px 0;
+}
+
+#footer div#costomerLayout {
+  width: 500px;
+  display: flex;
+}
+
+#costomerArea div#customer_center {
+  width: 140px;
+}
+
+#costomerArea div#customer_center h1 {
+  font-size: 28px;
+  padding: 10px 0;
+}
+
+#customer_center button {
+  width: 140px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  margin: 8px 0;
+  background-color: #fff;
+}
+
+#costomerArea ul#centerTm {
+
+  padding: 10px;
+}
+
+#costomerArea ul#centerTm li {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+#costomerArea ul#centerTm li span {
+  color: #888888;
+  display: block;
+}
+
+/* 회사정보 */
+div#corpInfo {
+  width: 550px;
+}
+
+#corpInfo nav#footer_lnb ul {
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+
+#corpInfo nav#footer_lnb ul li a {
+  padding: 10px 20px 10px 0;
+  display: inline-block;
+}
+
+#corpInfo nav#footer_lnb ul li:nth-child(5) {
+  font-weight: bold;
+} 
+
+#company ul li{
+  color: #888888;
+  font-size: 12px;
+}
+
+#company ul li a {
+  color: #5f0080;
+}
+
+#company span {
+  color: #888888;
+  font-size: 10px;
+  padding: 10px 0;
+  margin-top: 26px;
+  display: inline-block;
+}
+
+#company ul#sns {
+  width: 200px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* footer#footer_link */
+footer#footer_link{
+  width: 1050px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+}
+
+#footer_link td.certificate {
+  padding-right: 20px;
+}
+
+#footer_link td  a{
+  color: #888888;
+  font-size: 11px;
+  display: inline-block;
+}
+
+/* 페이지상단이동버튼 */
+a#pageTop {
+  width: 58px;
+  height: 58px;
+  text-align: center;
+  padding-top: 10px;
+  border: 1px solid #eee;
+  border-radius: 58px;
+  display: inline-block;
+  background-color: #fff;
+
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+
+  display: none;
+}
+
+a#pageTop:hover {
+  background-color: #f7f7f7;
 }

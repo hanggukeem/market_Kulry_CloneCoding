@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
   <link rel="stylesheet" href="assets/style/index.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="/assets/script/index.js"></script>
+  <script defer src="assets/script/index.js"></script>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <header id="header">
       <div id="header_top">
         <a href="#">
-          <img src="assets/images/main/header_banner.gif" alt="샛별배송/택배배송공지" width="180" />
+          <img src="assets/images/header/header_banner.gif" alt="샛별배송/택배배송공지" width="180" />
         </a>
         <nav id="header_lnb">
           <ul id="user_lnb">
@@ -38,7 +38,7 @@
       </div>
       <!--div#header_top-->
       <div id="headerLogo">
-        <a href="#"><img src="assets/images/main/header_logo.png" alt="로고" width="140" /></a>
+        <a href="#"><img src="assets/images/header/header_logo.png" alt="로고" width="140" /></a>
       </div>
       <!-- div#headerLogo -->
 
@@ -59,15 +59,15 @@
           <!-- nav#gnb_main -->
           <nav id="search">
             <div id="search_product">
-              <input type="text" placeholder="추석선물 준비 라스트 오더!" />
+              <input type="text" placeholder="식단관리하기" />
               <button>
-                <img src="assets/images/main/magnifying_glass.png" alt="찾기" width="18" />
+                <img src="assets/images/header/magnifying_glass.png" alt="찾기" width="18" />
               </button>
             </div>
             <!-- div#search_product-->
 
             <div id="cart">
-              <a href="#"><img src="assets/images/main/cart.png" alt="장바구니" width="30" /></a>
+              <a href="#"><img src="assets/images/header/cart.png" alt="장바구니" width="30" /></a>
             </div>
             <!--div#cart-->
           </nav>
@@ -335,6 +335,16 @@
       <!-- div#slideFrame_main-->
     </div>
     <!--div#mainSlide-->
+    <div id="quick_lnb">
+      <a href="#">
+        <img src="assets/images/main/banner.jpg" alt="배너">
+      </a>
+      <ul id="quick_menu">
+        <li><a href="#">등급별 혜택</a></li>
+        <li><a href="#">레시피</a></li>
+        <li><a href="#">베스트 후기</a></li>
+      </ul>
+    </div> <!-- div#quick_lnb -->
     <main id="main">
       <section class="product_list">
         <a href="#">
@@ -857,9 +867,131 @@
         </div>
       </section>
     </main>
-    <footer id="footer"></footer>
+    <aside>
+      <a href="#">
+        <img src="assets/images/footer/footer_banner.jpg" alt="배송안내">
+      </a>
+    </aside>
+    <footer id="footer">
+      <div id="costomerArea">
+        <h2>고객행복센터</h2>
+        <div id="costomerLayout">
+          <div id="customer_center">
+            <h1>1644-1107</h1>
+            <button type="button">카카오톡 문의</button>
+            <br>
+            <button type="button">1:1 문의</button>
+          </div> <!-- div#customer-->
+          <ul id="centerTm">
+            <li>
+              365고객센터
+              <span class="operationTm">오전 7시-오후 7시</span>
+            </li>
+            <li>
+              365고객센터
+              <span class="operationTm">오전 7시-오후 7시</span>
+            </li>
+            <li>
+              24시간 접수 가능
+              <span class="operationTm">고객센터 운영시간에 순차적으로 답변해드리겠습니다.</span>
+            </li>
+          </ul>
+        </div> <!-- div#costomerLayout-->
+      </div> <!-- div#costomerArea-->
+      <div id="corpInfo">
+        <nav id="footer_lnb">
+          <ul>
+            <li><a href="#">컬리소개</a></li>
+            <li><a href="#">컬리소개영상</a></li>
+            <li><a href="#">인재채용</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용안내</a></li>
+          </ul>
+        </nav>
+        <div id="company">
+          <ul>
+            <li>
+              법인명 (상호) : 주식회사 컬리 | 사업자등록번호 : 261-81-23567
+              <a href="#">사업자정보 확인</a>
+            </li>
+            <li>
+              통신판매업 : 제 2018-서울강남-01646호 | 개인정보보호책임자 : 이원준
+            </li>
+            <li>
+              주소 : 서울시 도산대로 16길 20, 이래빌딩 B1 ~ 4F | 대표이사 : 김슬아
+            </li>
+            <li>
+              입점문의 : <a href="#">입점문의하기</a> | 제휴문의 : <a href="#">business@kurlycorp.com</a>
+            </li>
+            <li>
+              채용문의 : <a href="#">recruit@kurlycorp.com</a>
+            </li>
+            <li>
+              팩스 : 070 - 7500 - 6098 | 이메일 : <a href="#">help@kurlycorp.com</a>
+            </li>
+          </ul>
+          <span>
+            &copy; KURLY CORP. ALL RIGHTS RESERVED
+          </span>
+          <ul id="sns">
+            <li><a href="#"><img src="assets/images/footer/instgram.png" alt="인스타그램" width="30"></a></li>
+            <li><a href="#"><img src="assets/images/footer/facebook.png" alt="페이스북" width="30"></a></li>
+            <li><a href="#"><img src="assets/images/footer/blog.png" alt="블로그" width="30"></a></li>
+            <li><a href="#"><img src="assets/images/footer/naver.png" alt="네이버" width="30"></a></li>
+            <li><a href="#"><img src="assets/images/footer/youtube.png" alt="유튜브" width="30"></a></li>
+          </ul>
+        </div> <!-- div#company -->
+      </div> <!-- div#corpInfo -->
+    </footer>
+    <footer id="footer_link">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="#">
+                <img src="assets/images/footer/certificate_img01.png" alt="인증서1">
+              </a>
+            </td>
+            <td class="certificate">
+              <a href="#">
+                [인증범위] 마켓컬리 쇼핑몰 서비스 개발・운영 <br>
+                [유효기간] 2019.04.01 ~ 2022.03.31
+              </a>
+            </td>
+            <td>
+              <a href="#">
+                <img src="assets/images/footer/certificate_img02.png" alt="인증서2">
+              </a>
+            </td>
+            <td class="certificate">
+              <a href="#">
+                개인정보보호 우수 웹사이트・ <br>
+                개인정보처리시스템 인증(ePRIVACY PLUS)
+              </a>
+            </td>
+
+            <td>
+              <a href="#">
+                <img src="assets/images/footer/certificate_img03.png" alt="인증서3">
+              </a>
+            </td>
+            <td class="certificate">
+              <a href="#">
+                고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한<br>
+                토스 페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </footer>
+    <a href="#" id="pageTop">
+      <img src="assets/images/footer/top_arrow.png" alt="페이지상단이동">
+    </a>
   </div>
   <!-- div#wrap -->
+
 </body>
 
 </html>
