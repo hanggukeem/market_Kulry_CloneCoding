@@ -62,23 +62,13 @@ function fnGnbSticky() {
     }
 }
 
-// main slideshow
-setInterval(fnSlide, 3000);
-
-function fnSlide() {
-    $("#slideFrame_main").animate({ "margin-left": "-100%" }, 500, function () {
-        $(this).css({ "margin-left": "0" });
-        $("#slideFrame_main>a:first").insertAfter("#slideFrame_main>a:last");
-    });
-}
-
-
 // Quick menu
 let currentPosition = parseInt($("#quick_lnb").css("top"));
 $(window).scroll(function () {
     let position = $(window).scrollTop();
     $("#quick_lnb").stop().animate({ "top": position + currentPosition + "px" }, 1000);
 });
+
 
 //페이지상단이동
 $(window).scroll(function () {

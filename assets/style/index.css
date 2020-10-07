@@ -89,6 +89,8 @@ div#gnbArea {
   height: 60px;
   background-color: #fff;
   justify-content: space-between;
+  border-bottom: 2px solid #f0f0f0;
+  box-shadow: 1px 2px 8px #eee;
 }
 
 div#gnbTop {

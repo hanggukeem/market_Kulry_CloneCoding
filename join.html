@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
+    <link rel="stylesheet" href="assets/style/join.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="assets/script/join.js"></script>
+    <script defer src="assets/script/join_validation.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="header_top">
+                <a href="#">
+                    <img src="assets/images/header/header_banner.gif" alt="샛별배송/택배배송공지" width="180" />
+                </a>
+                <nav id="header_lnb">
+                    <ul id="user_lnb">
+                        <li class="menu"><a href="#">회원가입</a></li>
+                        <li class="menu"><a href="#">로그인</a></li>
+                        <li class="menu" id="lnb_subMenu">
+                            <a href="#">고객센터⏷</a>
+                            <ul id="user_lnbSub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주하는 질문</a></li>
+                                <li><a href="#">1:1 문의</a></li>
+                                <li><a href="#">상품제안</a></li>
+                                <li><a href="#">에코포장 피드백</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">배송지역 검색</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--div#header_top-->
+            <div id="headerLogo">
+                <a href="#"><img src="assets/images/header/header_logo.png" alt="로고" width="140" /></a>
+            </div>
+            <!-- div#headerLogo -->
+
+            <!--sticky 시작부분-->
+            <div id="gnbArea">
+                <div id="gnbTop">
+                    <nav id="gnb_main">
+                        <ul>
+                            <li class="menu">
+                                <a href="#"><i class="material-icons">&#xe5d2;</i>전체 카테고리</a>
+                            </li>
+                            <li class="menu"><a href="#">신상품</a></li>
+                            <li class="menu"><a href="#">베스트</a></li>
+                            <li class="menu"><a href="#">알뜰쇼핑</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </nav>
+                    <!-- nav#gnb_main -->
+                    <nav id="search">
+                        <div id="search_product">
+                            <input type="text" placeholder="식단관리하기" />
+                            <button>
+                                <img src="assets/images/header/magnifying_glass.png" alt="찾기" width="18" />
+                            </button>
+                        </div>
+                        <!-- div#search_product-->
+
+                        <div id="cart">
+                            <a href="#"><img src="assets/images/header/cart.png" alt="장바구니" width="30" /></a>
+                        </div>
+                        <!--div#cart-->
+                    </nav>
+                </div>
+                <!--div#gnbTop-->
+                <div id="gnbArea_sub">
+                    <nav id="gnb_sub">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/main/icon/icon01_off.png" alt="아이콘1" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon01_on.png" alt="아이콘1_change" class="icon_on" />
+                                    <span class="sub_title">채소</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">기본채소</a></li>
+                                    <li><a href="#">쌈･샐러드･간편채소</a></li>
+                                    <li><a href="#">브로콜리･특수채소</a></li>
+                                    <li><a href="#">콩나물･버섯류</a></li>
+                                    <li><a href="#">시금치･부추･나물</a></li>
+                                    <li><a href="#">양파･마늘･생각･파</a></li>
+                                    <li><a href="#">파프리카･피망･고추</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon02_off.png" alt="아이콘2" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon02_on.png" alt="아이콘2" class="icon_on" />
+
+                                    <span class="sub_title">과일・견과・쌀</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">제철과일</a></li>
+                                    <li><a href="#">국산과일</a></li>
+                                    <li><a href="#">수입과일</a></li>
+                                    <li><a href="#">냉동･건과일</a></li>
+                                    <li><a href="#">견과류</a></li>
+                                    <li><a href="#">쌀･잡곡</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon03_off.png" alt="아이콘3" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon03_on.png" alt="아이콘3" class="icon_on" />
+
+                                    <span class="sub_title">수산・해산・건어물</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">생선류</a></li>
+                                    <li><a href="#">오징어･낙지･문어</a></li>
+                                    <li><a href="#">새우･게･랍스터</a></li>
+                                    <li><a href="#">해산물･조개류</a></li>
+                                    <li><a href="#">수산가공품</a></li>
+                                    <li><a href="#">김･미역･해조류</a></li>
+                                    <li><a href="#">건어물･다시팩</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon04_off.png" alt="아이콘4" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon04_on.png" alt="아이콘4" class="icon_on" />
+
+                                    <span class="sub_title">정육・계란</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">소고기</a></li>
+                                    <li><a href="#">돼지고기</a></li>
+                                    <li><a href="#">계란류</a></li>
+                                    <li><a href="#">닭･오리고기</a></li>
+                                    <li><a href="#">양념육･돈까스</a></li>
+                                    <li><a href="#">양고기</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon05_off.png" alt="아이콘5" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon05_on.png" alt="아이콘5" class="icon_on" class="icon_on" />
+
+                                    <span class="sub_title">국・반찬・메인요리</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">국･탕･찌개</a></li>
+                                    <li><a href="#">밑반찬</a></li>
+                                    <li><a href="#">김치･장아찌･젓갈</a></li>
+                                    <li><a href="#">두부･어묵･부침개</a></li>
+                                    <li><a href="#">햄･소시지･통조림</a></li>
+                                    <li><a href="#">메인요리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon06_off.png" alt="아이콘6" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon06_on.png" alt="아이콘6" class="icon_on" class="icon_on" />
+
+                                    <span class="sub_title">샐러드・간편식</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#"> 샐러드･도시락</a></li>
+                                    <li><a href="#">간편식･냉동식품</a></li>
+                                    <li><a href="#">선식･시리얼･그래놀라</a></li>
+                                    <li><a href="#">만두･튀김･떡볶이</a></li>
+                                    <li><a href="#">죽･스프</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon07_off.png" alt="아이콘7" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon07_on.png" alt="아이콘7" class="icon_on" class="icon_on" />
+
+                                    <span class="sub_title">면・양념・오일</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">파스타･면류</a></li>
+                                    <li><a href="#">밀가루･가루･믹스</a></li>
+                                    <li><a href="#">향신료･소스･드레싱</a></li>
+                                    <li><a href="#">양념･액젓･장류</a></li>
+                                    <li><a href="#">소금･설탕･식초･꿀</a></li>
+                                    <li><a href="#">식용유･참기름･오일</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon08_off.png" alt="아이콘8" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon08_on.png" alt="아이콘8" class="icon_on" />
+
+                                    <span class="sub_title">음료・우유・떡・간식</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">생수･음료･주스</a></li>
+                                    <li><a href="#">커피･차</a></li>
+                                    <li><a href="#">우유･두유･요거트</a></li>
+                                    <li><a href="#">아이스크림</a></li>
+                                    <li><a href="#">떡･한과</a></li>
+                                    <li><a href="#">간식･과자･쿠키</a></li>
+                                    <li><a href="#">초콜릿･젤리･캔디</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon09_off.png" alt="아이콘9" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon09_on.png" alt="아이콘9" class="icon_on" />
+
+                                    <span class="sub_title">베이커리・치즈・델리</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">식빵･빵류</a></li>
+                                    <li><a href="#">잼･버터･스프레드</a></li>
+                                    <li><a href="#">케이크･파이･디저트</a></li>
+                                    <li><a href="#">치즈</a></li>
+                                    <li><a href="#">건조육</a></li>
+                                    <li><a href="#">올리브･피클･델리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon10_off.png" alt="아이콘10" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon10_on.png" alt="아이콘10" class="icon_on" />
+
+                                    <span class="sub_title">건강식품</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">건강즙･건강음료</a></li>
+                                    <li><a href="#">홍삼･인삼･꿀</a></li>
+                                    <li><a href="#">영양제</a></li>
+                                    <li><a href="#">유산균</a></li>
+                                    <li><a href="#">건강분말･건강환</a></li>
+                                    <li><a href="#">유아동</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon11_off.png" alt="아이콘11" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon11_on.png" alt="아이콘11" class="icon_on" />
+
+                                    <span class="sub_title">생활용품・리빙</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">휴지･티슈･위생용품</a></li>
+                                    <li><a href="#">세제･청소용품</a></li>
+                                    <li><a href="#">화훼･인테리어소품</a></li>
+                                    <li><a href="#">의약외품･마스크</a></li>
+                                    <li><a href="#">생활잡화･문구</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon12_off.png" alt="아이콘12" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon12_on.png" alt="아이콘12" class="icon_on" />
+
+                                    <span class="sub_title">뷰티・바디케어</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">스킨케어</a></li>
+                                    <li><a href="#">구강･면도</a></li>
+                                    <li><a href="#">바디･제모</a></li>
+                                    <li><a href="#">헤어케어</a></li>
+                                    <li><a href="#">미용기기･소품</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon13_off.png" alt="아이콘13" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon13_on.png" alt="아이콘13" class="icon_on" />
+
+                                    <span class="sub_title">주방용품</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">주방소모품</a></li>
+                                    <li><a href="#">주방･조리도구</a></li>
+                                    <li><a href="#">냄비･팬류</a></li>
+                                    <li><a href="#">식기류</a></li>
+                                    <li><a href="#">컵･와인잔･사케잔</a></li>
+                                    <li><a href="#">차･커피도구</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon14_off.png" alt="아이콘14" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon14_on.png" alt="아이콘14" class="icon_on" />
+
+                                    <span class="sub_title">가전제품</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">주방가전</a></li>
+                                    <li><a href="#">생활가전</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon15_off.png" alt="아이콘15" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon15_on.png" alt="아이콘15" class="icon_on" />
+
+                                    <span class="sub_title">베이비・키즈</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">분유･간편 이유식</a></li>
+                                    <li><a href="#">이유식 재료</a></li>
+                                    <li><a href="#">유아･어린이 음식</a></li>
+                                    <li><a href="#">간식･음료･건강식품</a></li>
+                                    <li><a href="#">유아용품･젖병･식기류</a></li>
+                                    <li><a href="#">기저귀･물티슈</a></li>
+                                    <li><a href="#">목욕･세제･위생용품</a></li>
+                                    <li><a href="#">유아스킨･구강케어</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/images/main/icon/icon16_off.png" alt="아이콘16" class="icon_off" />
+                                    <img src="assets/images/main/icon/change/icon16_on.png" alt="아이콘16" class="icon_on" />
+
+                                    <span class="sub_title">반려동물</span>
+                                </a>
+                                <ul class="innerGnb_sub">
+                                    <li><a href="#">강아지 간식</a></li>
+                                    <li><a href="#">강아지 주식</a></li>
+                                    <li><a href="#">고양이 간식</a></li>
+                                    <li><a href="#">고양이 주식</a></li>
+                                    <li><a href="#">반려동물 용품</a></li>
+                                    <li><a href="#">배변･위생</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- nav#gnb_sub -->
+                </div>
+                <!-- div#gnbArea_sub-->
+            </div>
+            <!-- div#gnbArea -->
+        </header>
+        <div id="quick_lnb">
+            <a href="#">
+                <img src="assets/images/main/banner.jpg" alt="배너">
+            </a>
+            <ul id="quick_menu">
+                <li><a href="#">등급별 혜택</a></li>
+                <li><a href="#">레시피</a></li>
+                <li><a href="#">베스트 후기</a></li>
+            </ul>
+        </div> <!-- div#quick_lnb -->
+        <form id="joinFrm">
+            <div id="userInfo">
+                <h2>회원가입</h2>
+                <p><span>*</span> 필수입력사항</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th class=" required_tit">
+                                아이디
+                            </th>
+                            <td>
+                                <input type="text" id="uId" placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합">
+                                <button type="button">중복확인</button>
+                                <ul class="msg" id="idMsg"></ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class=" required_tit">
+                                비밀번호
+                            </th>
+                            <td>
+                                <input type="password" id="uPw" placeholder="비밀번호를 입력해주세요">
+                                <ul class="msg" id="pwMsg">
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class=" required_tit">
+                                비밀번호 확인
+                            </th>
+                            <td>
+                                <input type="password" id="uPwChk" placeholder="비밀번호를 한번 더 입력해주세요">
+                                <ul class="msg" id="pwChkMsg"></ul>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th class=" required_tit">
+                                이름
+                            </th>
+                            <td>
+                                <input type="text" id="uName" placeholder="이름을 입력해주세요">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class=" required_tit">
+                                이메일
+                            </th>
+                            <td>
+                                <input type="text" id="uEmail" placeholder="예: marketkurly@kurly.com">
+                                <button type="button">중복확인</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class=" required_tit">
+                                휴대폰
+                            </th>
+                            <td>
+                                <input type="text" id="uNum" placeholder="숫자만 입력해주세요">
+                                <button type="button" disabled id="verification_code">인증번호 받기</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class=" required_tit">
+                                주소
+                            </th>
+                            <td>
+                                <button type="button" id="search_address">
+                                    <img src="assets/images/main/magnifying_glass.png" alt="찾기" width="13" />
+                                    주소 검색</button>
+                                <p id="address">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                성별
+                            </th>
+                            <td>
+                                <label class="radioBtn">
+                                    <input type="radio" name="gender">
+                                    <span class="checkmark"></span>
+                                    남자
+                                </label>
+                                <label class="radioBtn">
+                                    <input type="radio" name="gender">
+                                    <span class="checkmark"></span>
+                                    여자
+                                </label>
+                                <label class="radioBtn">
+                                    <input type="radio" name="gender" checked>
+                                    <span class="checkmark"></span>
+                                    선택안함
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                생년월일
+                            </th>
+                            <td>
+                                <div id="birthday_box">
+                                    <input type="text" id="ubirth_year" placeholder="YYYY">
+                                    <span>/</span>
+                                    <input type="text" id="ubirth_month" placeholder="MM">
+                                    <span>/</span>
+                                    <input type="text" id="ubirth_date" placeholder="DD">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="division_line">
+                            <th>
+                                추가입력 사항
+                            </th>
+                            <td>
+                                <label class="radioBtn">
+                                    <input type="radio" name="add" id="sponId">
+                                    <span class="checkmark"></span>
+                                    추천인 아이디
+                                </label>
+                                <label class="radioBtn">
+                                    <input type="radio" name="add" id="event_name">
+                                    <span class="checkmark"></span>
+                                    참여 이벤트명
+                                </label>
+                                <div id="add_input">
+                                    <input type="text">
+                                    <p>
+                                        추천인 아이디와 참여 이벤트명 중 하나만 선택 가능합니다.<br>
+                                        가입 이후, 수정이 불가합니다. <br>
+                                        대소문자 및 띄어쓰기에 유의해주세요.
+                                    </p>
+                                </div> <!-- div#add_input -->
+                            </td>
+                        </tr>
+                        <tr id="user_agreements">
+                            <th class=" required_tit">
+                                이용약관 동의
+                            </th>
+                            <td>
+                                <div id="completeAgree">
+                                    <label class="checkboxBtn">
+                                        <input type="checkbox" id="chkAll">
+                                        <span class="checkbox"></span>
+                                        <span class="completeAgree">전체 동의합니다.</span>
+                                        <p>선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label class="checkboxBtn">
+                                        <input type="checkbox" id="chk_01">
+                                        <span class="checkbox"></span>
+                                        이용약관 동의 <span class="side_tit">(필수)</span>
+                                    </label>
+                                    <a href="#" class="clause">약관보기></a>
+                                </div>
+                                <div>
+                                    <label class="checkboxBtn">
+                                        <input type="checkbox" id="chk_02">
+                                        <span class="checkbox"></span>
+                                        개인정보처리방침 동의<span class="side_tit">(필수)</span>
+                                    </label>
+                                    <a href="#" class="clause">약관보기></a>
+                                </div>
+                                <div>
+                                    <label class="checkboxBtn">
+                                        <input type="checkbox" id="chk_03">
+                                        <span class="checkbox"></span>
+                                        개인정보처리방침 동의 <span class="side_tit">(선택)</span>
+                                    </label>
+                                    <a href="#" class="clause">약관보기></a>
+                                </div>
+                                <div>
+                                    <label class="checkboxBtn">
+                                        <input type="checkbox" id="chk_04">
+                                        <span class="checkbox"></span>
+                                        무료배송, 할인쿠폰 등 혜택/정보 수신 동의 <span class="side_tit">(선택)</span>
+                                    </label>
+                                </div>
+                                <div id="sms_email">
+                                    <label class="checkboxBtn">
+                                        <input type="checkbox" id="chk_05">
+                                        <span class="checkbox"></span>
+                                        SMS
+                                    </label>
+                                    <label class="checkboxBtn">
+                                        <input type="checkbox" id="chk_06">
+                                        <span class="checkbox"></span>
+                                        이메일
+                                    </label>
+                                    <p>┕ 동의 시 한 달간 [5% 적립]+[무제한 무료배송] <span>(첫 주문 후 적용)</span></p>
+                                </div>
+                                <div>
+                                    <label class="checkboxBtn">
+                                        <input type="checkbox" id="chk_07">
+                                        <span class="checkbox"></span>
+                                        본인은 만 14세 이상입니다. <span class="side_tit">(필수)</span>
+                                    </label>
+                                </div>
+                                <div></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" id="joinBtn">가입하기</button>
+            </div>
+            <!--div#userInfo-->
+        </form>
+        <footer id="footer">
+            <div id="costomerArea">
+                <h2>고객행복센터</h2>
+                <div id="costomerLayout">
+                    <div id="customer_center">
+                        <h1>1644-1107</h1>
+                        <button type="button">카카오톡 문의</button>
+                        <br>
+                        <button type="button">1:1 문의</button>
+                    </div> <!-- div#customer-->
+                    <ul id="centerTm">
+                        <li>
+                            365고객센터
+                            <span class="operationTm">오전 7시-오후 7시</span>
+                        </li>
+                        <li>
+                            365고객센터
+                            <span class="operationTm">오전 7시-오후 7시</span>
+                        </li>
+                        <li>
+                            24시간 접수 가능
+                            <span class="operationTm">고객센터 운영시간에 순차적으로 답변해드리겠습니다.</span>
+                        </li>
+                    </ul>
+                </div> <!-- div#costomerLayout-->
+            </div> <!-- div#costomerArea-->
+            <div id="corpInfo">
+                <nav id="footer_lnb">
+                    <ul>
+                        <li><a href="#">컬리소개</a></li>
+                        <li><a href="#">컬리소개영상</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                    </ul>
+                </nav>
+                <div id="company">
+                    <ul>
+                        <li>
+                            법인명 (상호) : 주식회사 컬리 | 사업자등록번호 : 261-81-23567
+                            <a href="#">사업자정보 확인</a>
+                        </li>
+                        <li>
+                            통신판매업 : 제 2018-서울강남-01646호 | 개인정보보호책임자 : 이원준
+                        </li>
+                        <li>
+                            주소 : 서울시 도산대로 16길 20, 이래빌딩 B1 ~ 4F | 대표이사 : 김슬아
+                        </li>
+                        <li>
+                            입점문의 : <a href="#">입점문의하기</a> | 제휴문의 : <a href="#">business@kurlycorp.com</a>
+                        </li>
+                        <li>
+                            채용문의 : <a href="#">recruit@kurlycorp.com</a>
+                        </li>
+                        <li>
+                            팩스 : 070 - 7500 - 6098 | 이메일 : <a href="#">help@kurlycorp.com</a>
+                        </li>
+                    </ul>
+                    <span>
+                        &copy; KURLY CORP. ALL RIGHTS RESERVED
+                    </span>
+                    <ul id="sns">
+                        <li><a href="#"><img src="assets/images/footer/instgram.png" alt="인스타그램" width="30"></a></li>
+                        <li><a href="#"><img src="assets/images/footer/facebook.png" alt="페이스북" width="30"></a></li>
+                        <li><a href="#"><img src="assets/images/footer/blog.png" alt="블로그" width="30"></a></li>
+                        <li><a href="#"><img src="assets/images/footer/naver.png" alt="네이버" width="30"></a></li>
+                        <li><a href="#"><img src="assets/images/footer/youtube.png" alt="유튜브" width="30"></a></li>
+                    </ul>
+                </div> <!-- div#company -->
+            </div> <!-- div#corpInfo -->
+        </footer>
+        <footer id="footer_link">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="#">
+                                <img src="assets/images/footer/certificate_img01.png" alt="인증서1">
+                            </a>
+                        </td>
+                        <td class="certificate">
+                            <a href="#">
+                                [인증범위] 마켓컬리 쇼핑몰 서비스 개발・운영 <br>
+                                [유효기간] 2019.04.01 ~ 2022.03.31
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="assets/images/footer/certificate_img02.png" alt="인증서2">
+                            </a>
+                        </td>
+                        <td class="certificate">
+                            <a href="#">
+                                개인정보보호 우수 웹사이트・ <br>
+                                개인정보처리시스템 인증(ePRIVACY PLUS)
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="#">
+                                <img src="assets/images/footer/certificate_img03.png" alt="인증서3">
+                            </a>
+                        </td>
+                        <td class="certificate">
+                            <a href="#">
+                                고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한<br>
+                                토스 페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </footer>
+        <a href="#" id="pageTop">
+            <img src="assets/images/footer/top_arrow.png" alt="페이지상단이동">
+        </a>
+    </div>
+    <!--div#wrap-->
+</body>
+
+</html>
