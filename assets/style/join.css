@@ -71,7 +71,7 @@ ul#user_lnb ul#user_lnbSub > li {
 }
 
 div#headerLogo {
-  width: 1050px;
+  width: 500px;
   height: 60px;
   text-align: center;
   /* border: 1px solid #000; */
@@ -79,7 +79,7 @@ div#headerLogo {
   position: relative;
   top: -20px;
 
-  z-index: -1;
+  z-index: 1;
 }
 
 /* gnb Menu */
