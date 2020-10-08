@@ -65,5 +65,16 @@ function fnLogin() {
         loginFrm.action = "https://www.kurly.com/shop/main/index";
         loginFrm.submit();
     }
+}
 
+//회원가입페이지 이동
+
+let joinBtn = document.getElementById("joinBtn");
+joinBtn.addEventListener("click", fnJoin);
+
+function fnJoin() {
+    let joinFrm = document.getElementById("loginFrm");
+
+    joinFrm.action = "join.html";
+    joinFrm.submit();
 }
