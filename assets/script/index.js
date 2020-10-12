@@ -31,6 +31,7 @@ $("nav#gnb_main>ul>li:first-child").mouseout(function () {
 $("nav#gnb_sub >ul>li a")
     .mouseover(function () {
         var imgsrc = $(this).find("img").attr("src");
+        // alert(imgsrc);
         imgsrc = imgsrc.replace("_off", "_on");
         $(this).find("img").attr("src", imgsrc);
     })

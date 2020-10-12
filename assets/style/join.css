@@ -437,6 +437,7 @@ div#quick_lnb {
       text-align: left;
   }
 
+  /* 생년월일 */
   #userInfo table td div#birthday_box {
     width: 330px;
     text-align: center;
@@ -460,9 +461,21 @@ div#quick_lnb {
     outline: none;
     margin: 0 8px;
 }
+#userInfo table td span#birthChk {
+  color: #ee6a7b;
+  font-size: 12px;
+}
 
+
+
+/* 추가입력사항 */
 #userInfo table tr.division_line {
     border-bottom: 1px solid #000;
+}
+
+#userInfo table tr.division_line th {
+  vertical-align: top;
+  padding-top: 22px;
 }
 
 #userInfo div#add_input {
@@ -474,6 +487,10 @@ div#quick_lnb {
 text-align: left;
 padding: 20px 0;
 }
+
+
+
+
 /* 이용약관 동의 */
 /* checkbox custom */
 
