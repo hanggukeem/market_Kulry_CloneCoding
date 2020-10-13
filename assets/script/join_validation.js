@@ -265,12 +265,11 @@ function fnJoin() {
     } else if (uName == "") {
         alert("이름을 입력해주세요.");
         document.getElementById("uName").focus();
+    } else if (uEmail == "") {
+        alert("이메일을 입력해주세요.")
+        document.getElementById("uEmail").focus();
+    } else if (uNum == "") {
+        alert("휴대폰 인증을 완료 해주세요.")
+        document.getElementById("uNum").focus();
     }
-} else if (uEmail == "") {
-    alert("이메일을 입력해주세요.")
-    document.getElementById("uEmail").focus();
-} else if (uNum == "") {
-    alert("휴대폰 인증을 완료 해주세요.")
-    document.getElementById("uNum").focus();
-}
 }

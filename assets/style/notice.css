@@ -286,153 +286,91 @@ div#quick_lnb {
 
 main#main {
     width: 1050px;
-    padding-top: 65px;
+    padding-top: 10px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
 }
 
-#main div#customer_center {
-  position: relative;
-}
-
-#main div#customer_center h2 {
-  height: 70px;
-  font-size: 30px;
-  font-weight: 700;
-}
-
-#main div#customer_center li {
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    border: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-}
-
-#main div#customer_center li:not(:first-child) {
-    border-top: none;
-}
-
-#main div#customer_center li#choose {
-    background-color: #f7f7f7;
-}
-
-#main div#customer_center li#choose>a ,  li#choose>span {
-    color: #5f0080;
-}
-
-
-#main div#customer_center li>a {
-    width: 200px;
+#main>p {
     font-size: 12px;
-    padding-left: 20px;
+    text-align: right;
+}
+
+#main h2 {
+    font-weight: 600;
+    padding: 30px 0 40px;
+}
+#main span {
+    color: #888888;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 14px;
+    margin-bottom: 10px;
     display: inline-block;
 }
 
-#main div#customer_center ul#lnb_menu li#choose i {
-  color: #5f0080;
-}
-#main div#customer_center  i {
-    color: #888;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 15px 20px;
-    display: inline-block;
-    position: absolute;
-    right: 4px;
+/* 공지사항게시판 */
+#main div#noticebbs {
+    width: 1050px;
 }
 
-#main div#bbsShortcut {
-  width: 200px;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 12px 10px 12px 18px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  margin: 10px 0;
-  background-color: #f7f7f7;
-}
-
-#main div#bbsShortcut a {
-  color: #666666;
-}
-
-#main div#bbsShortcut i {
-  color: #5f0080;
-  padding-top: 10px;
-}
-
-#main div#bbsShortcut span {
-  color: #666666;
-  font-size: 12px;
-  font-weight: normal;
-}
-
-#main div#QnAbbs {
-    width: 820px;
-}
-
-
-#main div#QnAbbs h2 {
+#main div#noticebbs h2 {
  height: 70px;
  font-weight: normal;
 }
 
-#main div#QnAbbs table {
-  width: 820px;
+#main div#noticebbs table {
+  width: 1050px;
   font-size: 12px;
-  text-align: center;
+
   border-top: 2px solid #5f0080;
   border-collapse: collapse;
 }
 
-#main div#QnAbbs table tr td {
-  height: 60px;
-  border-bottom:1px solid #cccccc
+#main div#noticebbs table tr th {
+  width: 130px;
+  height: 48px;
+  text-align: left;
+  padding-left: 16px;
+  border-bottom: 1px solid #eee;
+  background-color: #f7f5f8;
 }
 
-#main div#QnAbbs table tr td:first-child {
-  width: 65px;
-} 
-
-#main div#QnAbbs table tr td:nth-child(2) {
-  width: 123px;
-} 
-#main div#QnAbbs table tr td:nth-child(3) {
-  width: 436px;
-} 
-
-#main div#QnAbbs div#data_input {
-  width: 820px;
-  height: 320px;
-  line-height: 320px;
-  font-size: 12px;
-  text-align: center;
+#main div#noticebbs table tr td {
+    border-bottom: 1px solid #eee;
+    padding-left: 30px;
 }
 
-div#content {
-  width: 1050px;
-  height: 170px;
-  text-align: right;
-  margin: 0 auto;
+#main div#noticebbs table tr:nth-child(3) td:nth-child(2) {
+    width: 180px;
 }
 
-#content span#writeBtn {
+#main div#contents {
+    width: 1050px;
+    text-align: center;
+}
+
+div#listBtn {
+    width: 1050px;
+    height: 170px;
+    text-align: right;
+    margin: 0 auto;
+  }
+
+#listBtn span#bbsList {
   color: #ffffff;
-  width: 100px;
-  line-height: 30px;
+  width: 150px;
+  line-height: 42px;
   font-size: 13px;
   text-align: center;
   border: 1px solid #5f0080;
+  margin-top: 10px;
   background-color: #795b8f;
   display: inline-block;
 }
 
-#content span#writeBtn:hover {
-  color: #5f0080;
-  background-color: #fff;
+#listBtn span#bbsList:hover {
+  color: #fff;
+  background-color: #5f0080;
   cursor: pointer;
 }
 
@@ -552,4 +490,26 @@ footer#footer {
     color: #888888;
     font-size: 11px;
     display: inline-block;
+  }
+
+  /* 페이지상단이동버튼 */
+a#pageTop {
+    width: 58px;
+    height: 58px;
+    text-align: center;
+    padding-top: 10px;
+    border: 1px solid #eee;
+    border-radius: 58px;
+    display: inline-block;
+    background-color: #fff;
+  
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+  
+    display: none;
+  }
+  
+  a#pageTop:hover {
+    background-color: #f7f7f7;
   }

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
-    <link rel="stylesheet" href="assets/style/join.css" />
+    <link rel="stylesheet" href="assets/style/notice.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="assets/script/join.js"></script>
-    <script defer src="assets/script/join_validation.js"></script>
+    <script defer src="assets/script/notice.js"></script>
 </head>
 
 <body>
@@ -333,215 +333,42 @@
                 <li><a href="#">베스트 후기</a></li>
             </ul>
         </div> <!-- div#quick_lnb -->
-        <form id="joinFrm">
-            <div id="userInfo">
-                <h2>회원가입</h2>
-                <p><span>*</span> 필수입력사항</p>
+        <main id="main">
+            <p><a href="index.html">홈</a>>고객행복센터><strong>공지사항</strong></p>
+            <h2>
+                공지사항
+                <span>컬리의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</span>
+            </h2>
+            <div id="noticebbs">
                 <table>
                     <tbody>
                         <tr>
-                            <th class=" required_tit">
-                                아이디
-                            </th>
-                            <td>
-                                <input type="text" id="uId" placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합">
-                                <button type="button" id="idChk">중복확인</button>
-                                <ul class="msg" id="idMsg"></ul>
-                            </td>
+                            <th>제목</th>
+                            <td colspan="3">마켓컬리 배송 안내</td>
                         </tr>
                         <tr>
-                            <th class=" required_tit">
-                                비밀번호
-                            </th>
-                            <td>
-                                <input type="password" id="uPw" placeholder="비밀번호를 입력해주세요">
-                                <ul class="msg" id="pwMsg">
-                                </ul>
-                            </td>
+                            <th>작성자</th>
+                            <td colspan="3">MarketKurly</td>
                         </tr>
                         <tr>
-                            <th class=" required_tit">
-                                비밀번호 확인
-                            </th>
-                            <td>
-                                <input type="password" id="uPwChk" placeholder="비밀번호를 한번 더 입력해주세요">
-                                <ul class="msg" id="pwChkMsg"></ul>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <th class=" required_tit">
-                                이름
-                            </th>
-                            <td>
-                                <input type="text" id="uName" placeholder="이름을 입력해주세요">
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th class=" required_tit">
-                                이메일
-                            </th>
-                            <td>
-                                <input type="text" id="uEmail" placeholder="예: marketkurly@kurly.com">
-                                <button type="button" id="emailChk">중복확인</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class=" required_tit">
-                                휴대폰
-                            </th>
-                            <td>
-                                <input type="text" id="uNum" placeholder="숫자만 입력해주세요">
-                                <button type="button" disabled id="verification_code">인증번호 받기</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class=" required_tit">
-                                주소
-                            </th>
-                            <td>
-                                <button type="button" id="search_address">
-                                    <img src="assets/images/main/magnifying_glass.png" alt="찾기" width="13" />
-                                    주소 검색</button>
-                                <p id="address">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                성별
-                            </th>
-                            <td>
-                                <label class="radioBtn">
-                                    <input type="radio" name="gender">
-                                    <span class="checkmark"></span>
-                                    남자
-                                </label>
-                                <label class="radioBtn">
-                                    <input type="radio" name="gender">
-                                    <span class="checkmark"></span>
-                                    여자
-                                </label>
-                                <label class="radioBtn">
-                                    <input type="radio" name="gender" checked>
-                                    <span class="checkmark"></span>
-                                    선택안함
-                                </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                생년월일
-                            </th>
-                            <td>
-                                <div id="birthday_box">
-                                    <input type="text" id="ubirth_year" placeholder="YYYY">
-                                    <span>/</span>
-                                    <input type="text" id="ubirth_month" placeholder="MM">
-                                    <span>/</span>
-                                    <input type="text" id="ubirth_date" placeholder="DD">
-                                </div>
-                                <span id="birthChk"></span>
-                            </td>
-                        </tr>
-                        <tr class="division_line">
-                            <th>
-                                추가입력 사항
-                            </th>
-                            <td>
-                                <label class="radioBtn">
-                                    <input type="radio" name="add" id="sponId">
-                                    <span class="checkmark"></span>
-                                    추천인 아이디
-                                </label>
-                                <label class="radioBtn">
-                                    <input type="radio" name="add" id="event_name">
-                                    <span class="checkmark"></span>
-                                    참여 이벤트명
-                                </label>
-                                <div id="add_input">
-                                    <input type="text">
-                                    <p>
-                                        추천인 아이디와 참여 이벤트명 중 하나만 선택 가능합니다.<br>
-                                        가입 이후, 수정이 불가합니다. <br>
-                                        대소문자 및 띄어쓰기에 유의해주세요.
-                                    </p>
-                                </div> <!-- div#add_input -->
-                            </td>
-                        </tr>
-                        <tr id="user_agreements">
-                            <th class=" required_tit">
-                                이용약관 동의
-                            </th>
-                            <td>
-                                <div id="completeAgree">
-                                    <label class="checkboxBtn">
-                                        <input type="checkbox" id="chkAll">
-                                        <span class="checkbox"></span>
-                                        <span class="completeAgree">전체 동의합니다.</span>
-                                        <p>선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label class="checkboxBtn">
-                                        <input type="checkbox" id="chk_01">
-                                        <span class="checkbox"></span>
-                                        이용약관 동의 <span class="side_tit">(필수)</span>
-                                    </label>
-                                    <a href="#" class="clause">약관보기></a>
-                                </div>
-                                <div>
-                                    <label class="checkboxBtn">
-                                        <input type="checkbox" id="chk_02">
-                                        <span class="checkbox"></span>
-                                        개인정보처리방침 동의<span class="side_tit">(필수)</span>
-                                    </label>
-                                    <a href="#" class="clause">약관보기></a>
-                                </div>
-                                <div>
-                                    <label class="checkboxBtn">
-                                        <input type="checkbox" id="chk_03">
-                                        <span class="checkbox"></span>
-                                        개인정보처리방침 동의 <span class="side_tit">(선택)</span>
-                                    </label>
-                                    <a href="#" class="clause">약관보기></a>
-                                </div>
-                                <div>
-                                    <label class="checkboxBtn">
-                                        <input type="checkbox" id="chk_04">
-                                        <span class="checkbox"></span>
-                                        무료배송, 할인쿠폰 등 혜택/정보 수신 동의 <span class="side_tit">(선택)</span>
-                                    </label>
-                                </div>
-                                <div id="sms_email">
-                                    <label class="checkboxBtn">
-                                        <input type="checkbox" id="chk_05">
-                                        <span class="checkbox"></span>
-                                        SMS
-                                    </label>
-                                    <label class="checkboxBtn">
-                                        <input type="checkbox" id="chk_06">
-                                        <span class="checkbox"></span>
-                                        이메일
-                                    </label>
-                                    <p>┕ 동의 시 한 달간 [5% 적립]+[무제한 무료배송] <span>(첫 주문 후 적용)</span></p>
-                                </div>
-                                <div>
-                                    <label class="checkboxBtn">
-                                        <input type="checkbox" id="chk_07">
-                                        <span class="checkbox"></span>
-                                        본인은 만 14세 이상입니다. <span class="side_tit">(필수)</span>
-                                    </label>
-                                </div>
-                                <div></div>
-                            </td>
+                            <th>작성일</th>
+                            <td>2016-01-08</td>
+                            <th>조회수</th>
+                            <td>2349675</td>
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" id="joinBtn">가입하기</button>
-            </div>
-            <!--div#userInfo-->
-        </form>
+                <div id="contents">
+                    <img src="assets/images/notice/notice_bbs.jpg" alt="배송안내">
+                </div>
+                <!--div#contents-->
+            </div> <!-- div#noticebbs-->
+        </main>
+        <div id="listBtn">
+            <a href="#">
+                <span id="bbsList">목록</span>
+            </a>
+        </div>
         <footer id="footer">
             <div id="costomerArea">
                 <h2>고객행복센터</h2>
@@ -659,8 +486,7 @@
         <a href="#" id="pageTop">
             <img src="assets/images/footer/top_arrow.png" alt="페이지상단이동">
         </a>
-    </div>
-    <!--div#wrap-->
+    </div> <!-- div#wrap -->
 </body>
 
 </html>

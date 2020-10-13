@@ -370,10 +370,10 @@ main#main {
   font-weight: normal;
 }
 
+/* 문의게시글 작성 */
 #main div#QnAbbs {
     width: 820px;
 }
-
 
 #main div#QnAbbs h2 {
  height: 70px;
@@ -383,56 +383,153 @@ main#main {
 #main div#QnAbbs table {
   width: 820px;
   font-size: 12px;
-  text-align: center;
+
   border-top: 2px solid #5f0080;
   border-collapse: collapse;
 }
 
+#main div#QnAbbs table tr th {
+  width: 114px;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 16px;
+  border-bottom: 1px solid #eee;
+  background-color: #f7f5f8;
+}
+
+#main div#QnAbbs table tr:first-child> th {
+    height: 100px;
+}
+
+#main div#QnAbbs table tr:nth-child(2)> th,
+table tr:nth-child(3)>th,
+table tr:nth-child(4)>th {
+    height: 60px;
+}
 #main div#QnAbbs table tr td {
-  height: 60px;
-  border-bottom:1px solid #cccccc
+    width: 706px;
+    border-bottom: 1px solid #eee;
+    padding-left: 10px;
 }
 
-#main div#QnAbbs table tr td:first-child {
-  width: 65px;
-} 
-
-#main div#QnAbbs table tr td:nth-child(2) {
-  width: 123px;
-} 
-#main div#QnAbbs table tr td:nth-child(3) {
-  width: 436px;
-} 
-
-#main div#QnAbbs div#data_input {
-  width: 820px;
-  height: 320px;
-  line-height: 320px;
-  font-size: 12px;
-  text-align: center;
+#main div#QnAbbs table select {
+    width: 134px;
+    height: 34px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    margin-bottom: 4px;
 }
+
+#main div#QnAbbs table input#title {
+    width: 696px;
+}
+
+#main div#QnAbbs table input {
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+#main div#QnAbbs table tr td button {
+    color: #ffffff;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #5f0080;
+    margin-left: 4px;
+    background-color: #795b8f;
+    display: inline-block;
+}
+
+#main div#QnAbbs table tr td button:hover {
+    color: #fff;
+    background-color: #5f0080;
+    cursor: pointer;
+  }
+
+  #main div#QnAbbs table tr td label  {
+      margin-left: 10px;
+  }
+
+  #main div#QnAbbs table tr td label input {
+      height: 20px;
+      border: 1px solid #000;
+      position: relative;
+      top: 5px;
+  }
+
+  #main div#QnAbbs table tr:nth-child(5) {
+      height: 773px;
+  }
+
+  #main div#QnAbbs table tr:nth-child(5) td {
+      vertical-align: top;
+      padding-top: 10px;
+  }
+
+  #main div#QnAbbs table tr:nth-child(5) td>span {
+      padding: 14px 0;
+      display: inline-block;
+  }
+
+  #main div#QnAbbs table tr:nth-child(5) dl {
+      padding: 8px 0;
+  }
+
+  #main div#QnAbbs table tr:nth-child(5) dt {
+      font-size: 11px;
+     font-weight: bold;
+  }
+
+  #main div#QnAbbs table tr:nth-child(5) span#warning {
+      color: #5f0080;
+  }
+  
+
+  #main div#QnAbbs table tr:nth-child(5) textarea {
+      width: 100%;
+      height: 474px;
+      border: 1px solid #ccc;
+      margin-top: 14px;
+  }
+
+  #main div#QnAbbs table tr:last-child {
+    height: 70px;
+  }
+  
+  
+  #main div#QnAbbs table tr:last-child div#choose_file {
+      padding: 4px 2px;
+      border: 1px solid #ccc;
+  }
+
+  #main div#QnAbbs table tr:last-child input[type=file] {
+      padding-top: 2px;
+      border:none;
+  }
 
 div#content {
-  width: 1050px;
-  height: 170px;
-  text-align: right;
-  margin: 0 auto;
-}
+    width: 1050px;
+    height: 170px;
+    text-align: right;
+    margin: 0 auto;
+  }
 
 #content span#writeBtn {
   color: #ffffff;
-  width: 100px;
-  line-height: 30px;
+  width: 150px;
+  line-height: 42px;
   font-size: 13px;
   text-align: center;
   border: 1px solid #5f0080;
+  margin-top: 10px;
   background-color: #795b8f;
   display: inline-block;
 }
 
 #content span#writeBtn:hover {
-  color: #5f0080;
-  background-color: #fff;
+  color: #fff;
+  background-color: #5f0080;
   cursor: pointer;
 }
 
@@ -552,4 +649,26 @@ footer#footer {
     color: #888888;
     font-size: 11px;
     display: inline-block;
+  }
+
+  /* 페이지상단이동버튼 */
+a#pageTop {
+    width: 58px;
+    height: 58px;
+    text-align: center;
+    padding-top: 10px;
+    border: 1px solid #eee;
+    border-radius: 58px;
+    display: inline-block;
+    background-color: #fff;
+  
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+  
+    display: none;
+  }
+  
+  a#pageTop:hover {
+    background-color: #f7f7f7;
   }
