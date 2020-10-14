@@ -96,3 +96,18 @@ $("#pageTop").click(function () {
     }, 400);
     return false;
 });
+
+//등급별혜택 popup
+let popup = document.querySelector("#membership_popup");
+popup.addEventListener("click", fnPopup);
+
+function fnPopup() {
+    document.getElementById("membership").style.display = "block";
+}
+
+let close = document.querySelector("#closeBtn");
+close.addEventListener("click", fnPopupClose);
+
+function fnPopupClose() {
+    document.getElementById("membership").style.display = "none";
+}

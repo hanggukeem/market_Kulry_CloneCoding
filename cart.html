@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
-    <link rel="stylesheet" href="assets/style/login.css">
+    <link rel="stylesheet" href="assets/style/cart.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="assets/script/login.js"></script>
+    <script defer src="assets/script/cart.js"></script>
 </head>
 
 <body>
@@ -59,7 +61,7 @@
                     <!-- nav#gnb_main -->
                     <nav id="search">
                         <div id="search_product">
-                            <input type="text" placeholder="식단관리하기" />
+                            <input type="text" placeholder="취향따라 가지각색" />
                             <button>
                                 <img src="assets/images/header/magnifying_glass.png" alt="찾기" width="18" />
                             </button>
@@ -322,28 +324,142 @@
             </div>
             <!-- div#gnbArea -->
         </header>
-        <form id="loginFrm">
-            <main id="login_Area">
-                <h3>로그인</h3>
-                <input type="text" id="userId" placeholder="아이디를 입력해주세요">
-                <input type="password" id="userPw" placeholder="비밀번호를 입력해주세요">
-                <div id="find_idpw">
-                    <label class="container">
-                        <input type="checkbox" checked="checked" />
-                        보안접속
-                        <span class="checkmark"></span>
-                    </label>
-                    <ul>
-                        <li><a href="#">아이디찾기</a></li>
-                        <span>|</span>
-                        <li><a href="#">비밀번호 찾기</a></li>
-                    </ul>
-                </div> <!-- div#find_idpw-->
-
-                <button type="button" id="loginBtn">로그인</button>
-                <button type="button" id="joinBtn">회원가입</button>
-            </main>
-        </form>
+        <div id="quick_lnb">
+            <a href="notice.html">
+                <img src="assets/images/main/banner.jpg" alt="배너">
+            </a>
+            <ul id="quick_menu">
+                <li><a href="#">등급별 혜택</a></li>
+                <li><a href="#">레시피</a></li>
+                <li><a href="#">베스트 후기</a></li>
+            </ul>
+        </div> <!-- div#quick_lnb -->
+        <main id="main">
+            <h1>
+                장바구니
+            </h1>
+            <p>주문하실 상품명 및 수량을 정확하게 확인해 주세요.</p>
+            <div id="cart">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                전체선택
+                                <span>(<span class="goods_cnt">0</span>/2)</span>
+                            </th>
+                            <th>상품 정보</th>
+                            <th>수량</th>
+                            <th>상품금액</th>
+                        </tr>
+                    </thead>
+                </table>
+                <table id="goodsList">
+                    <tbody>
+                        <tr>
+                            <td class="goodsChk">
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td class="goodsImg">
+                                <img src="assets/images/main/section/section01_img01.jpg" alt="상품이미지" width="60">
+                            </td>
+                            <td>
+                                <h3>
+                                    [우주인피자] 허니 고르곤 졸라
+                                </h3>
+                                <span>9,520원</span>
+                            </td>
+                            <td class="count_area">
+                                <div class="count">
+                                    <button type="button"><i class='fas fa-minus'></i></button>
+                                    <input type="text" value="1">
+                                    <button type="button"><i class='fas fa-plus'></i></button>
+                                </div> <!-- div#count -->
+                            </td>
+                            <td>
+                                <span id="goodsPrice">9520</span>
+                                <span>원</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="goodsChk">
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td class="goodsImg">
+                                <img src="assets/images/main/section/section01_img04.jpg" alt="상품이미지" width="60">
+                            </td>
+                            <td>
+                                <h3>
+                                    [스키니팻] 아몬드가루로 만든 블론디
+                                </h3>
+                                <span>3,700원</span>
+                            </td>
+                            <td class="count_area">
+                                <div class="count">
+                                    <button type="button"><i class='fas fa-minus'></i></button>
+                                    <input type="text" value="1">
+                                    <button type="button"><i class='fas fa-plus'></i></button>
+                                </div> <!-- div#count -->
+                            </td>
+                            <td>
+                                <span id="goodsPrice">3700</span>
+                                <span>원</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> <!-- div#cart-->
+            <div id="payment">
+                <div class="total_price">
+                    <span>상품금액</span>
+                    <h3>
+                        <span id="price">0</span> 원
+                    </h3>
+                </div> <!-- div.total_price -->
+                <i class='fas fa-minus'></i>
+                <div class="total_price">
+                    <span>상품할인금액</span>
+                    <h3>
+                        <span id="discount_price">0</span> 원
+                    </h3>
+                </div><!-- div.total_price -->
+                <i class='fas fa-plus'></i>
+                <div class="total_price">
+                    <span>배송비</span>
+                    <h3>
+                        <span id="delivery_fee">0</span>원
+                    </h3>
+                </div>
+                <!--div.total_price-->
+                <i class='fas fa-equals'></i>
+                <div class="total_price">
+                    <span>결제예정금액</span>
+                    <h3>
+                        <span id="result">0</span> 원
+                    </h3>
+                </div> <!-- div#total_price -->
+            </div> <!-- div#cart -->
+        </main>
+        <div id="orderBtn">
+            <a href="#">
+                <span id="confirm">주문하기</span>
+            </a>
+        </div>
+        <div id="notice">
+            <p>
+                '입금확인' 상태일 때는 주문내역 상세 페이지에서 직접 주문취소가 가능합니다. <br>
+                '입금확인' 이후 상태에는 고객행복센터로 문의해주세요.
+            </p>
+        </div>
         <footer id="footer">
             <div id="costomerArea">
                 <h2>고객행복센터</h2>
@@ -458,6 +574,9 @@
                 </tbody>
             </table>
         </footer>
+        <a href="#" id="pageTop">
+            <img src="assets/images/footer/top_arrow.png" alt="페이지상단이동">
+        </a>
     </div> <!-- div#wrap -->
 </body>
 
