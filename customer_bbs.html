@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
+    <link rel="stylesheet" href="assets/style/common.css">
     <link rel="stylesheet" href="assets/style/customer_bbs.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="assets/script/index.js"></script>
+    <script defer src="assets/script/common.js"></script>
+    <script defer src="assets/script/customer_bbs.js"></script>
 </head>
 
 <body>
@@ -328,7 +330,7 @@
                 <img src="assets/images/main/banner.jpg" alt="배너">
             </a>
             <ul id="quick_menu">
-                <li><a href="#">등급별 혜택</a></li>
+                <li><a href="#" id="membership_popup">등급별 혜택</a></li>
                 <li><a href="#">레시피</a></li>
                 <li><a href="#">베스트 후기</a></li>
             </ul>
@@ -489,6 +491,12 @@
             </table>
         </footer>
     </div> <!-- div#wrap -->
+    <div id="membership">
+        <div id="popup">
+            <button type="button" id="closeBtn"><i class="material-icons">close</i></button>
+            <img src="assets/images/notice/membership.jpg" alt="등급별혜택">
+        </div>
+    </div> <!-- div#membership -->
 </body>
 
 </html>
