@@ -26,15 +26,18 @@ function fnChk_Id() {
     if (uId_val == "") {
         msg_id.innerHTML = "･ 6자 이상의 영문 혹은 영문과 숫자를 조합"
             + "<br>" + "･ 아이디 중복확인";
+        msg_id.style.color = "#333333"
+        uId.focus();
     } else if (uIdChk.test(uId_val) || uId_val.length < 6) {
         msg_id.innerHTML = "X 6자 이상의 영문 혹은 영문과 숫자를 조합." + "<br>"
             + "<span>･ 아이디 중복확인</span>";
         msg_id.style.color = "#b3130b"
-    } else if (uPw.value == uPwChk.value) {
+    } else if (uId_val.length > 6) {
         msg_id.innerHTML = "✓ 6자 이상의 영문 혹은 영문과 숫자를 조합" + "<br>"
             + "<span>･ 아이디 중복확인</span>";
         msg_id.style.color = "#0f851a"
     }
+    return true;
 }
 
 //id 중복확인
@@ -48,6 +51,7 @@ function fnIdOverlapChk() {
     let msg_id = document.getElementById("createList_id");
     if (uId_val == "") {
         alert("아이디를 입력해주세요.");
+        uId_val.focus();
     } else if (uIdChk.test(uId_val) || uId_val.length < 6) {
         alert("아이디는 6자 이상의 영문 혹은 영문과 숫자 조합만 가능합니다.")
     } else {
@@ -56,7 +60,8 @@ function fnIdOverlapChk() {
             + "✓ 아이디 중복확인";
         msg_id.style.color = "#0f851a"
     }
-    chkFlag = true;
+    chkFlag1 = true;
+    return true;
 }
 
 //user password innerText
@@ -69,39 +74,38 @@ function validationChk_Pw() {
     msg.id = "createList_pw";
     msg.innerHTML =
         "･ 10자 이상 입력"
-        + "<br>" + "･ 영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합"
-        + "<br>" + "･ 동일한 숫자 3개 이상 연속 사용 불가";
+        + "<br>" + "･ 영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합";
     inputMsg.appendChild(msg);
 }
 //password 유효성 검사
 uPw.addEventListener("keyup", fnChk_Pw01);
-//수정작업해야함
-// uPw.addEventListener("keyup", fnChk_Pw_reg); 
+
 function fnChk_Pw01() {
-
     let msg_pw = document.getElementById("createList_pw");
-    if (uPw == "") {
-        msg_pw.innerHTML = "･ 10자 이상 입력"
-            + "<br>" + "･ 영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합"
-            + "<br>" + "･ 동일한 숫자 3개 이상 연속 사용 불가";
-    } else if (uPw.value.length > 1 && uPw.value.length <= 10) {
-        msg_pw.innerHTML = "X 10자 이상 입력"
-            + "<br>" + "<span>･ 영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합</span>"
-            + "<br>" + "<span>･ 동일한 숫자 3개 이상 연속 사용 불가</span>";
-        msg_pw.style.color = "#b3130b";
-    }
+    let pwReg = /[^a-z|A-Z|0-9|~!@#$%^&*()_+|<>?:{}]/;
+    let checkNumber = uPw.value.search(/[0-9]/g);
+    let checkEnglish = uPw.value.search(/[a-z]/ig);
 
+    if ((checkNumber < 0 || checkEnglish < 0) && pwReg.test(uPw) && (uPw.value.length <= 10)) {
+        msg_pw.innerHTML = " X 10자 이상 입력</span>"
+            + "<br>" + "X 영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합";
+        msg_pw.style.color = "#b3130b";
+
+    } else if ((checkNumber > 0 || checkEnglish > 0)) {
+        msg_pw.innerHTML = " X 10자 이상 입력</span>"
+            + "<br>" + " <span id='color'>✓ 영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합</span>";
+        msg_pw.style.color = "#b3130b";
+        document.getElementById("color").style.color = "#0f851a";
+        if (uPw.value.length >= 10) {
+            msg_pw.innerHTML = "✓ 10자 이상 입력"
+                + "<br>" + "✓ 영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합";
+            msg_pw.style.color = "#0f851a";
+        }
+    }
+    return true;
 }
-// function fnChk_Pw_reg() {
-//     let pwReg = /[^a-z|A-Z|0-9|~!@#$%^&*()_+|<>?:{} | \s]/;
-//     let msg_pw = document.getElementById("createList_pw");
-//     if (pwReg.test(uPw) || pwReg.search(/\s/)) {
-//         msg_pw.innerHTML = "<span>･ 10자 이상 입력</span>"
-//             + "<br>" + "X 영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합"
-//             + "<br>" + "<span>･ 동일한 숫자 3개 이상 연속 사용 불가</span>";
-//         msg_pw.style.color = "#b3130b";
-//     }
-// }
+
+
 //user passwordCheck innerText
 let uPwChk = document.querySelector("#uPwChk");
 uPwChk.addEventListener("focusin", validationChk_PwChk, { once: true });
@@ -119,6 +123,7 @@ function fnChk_Pw02() {
     let msg_pwChk = document.getElementById("createList_pwChk");
     if (uPw.value == "") {
         msg_pwChk.innerHTML = "･ 동일한 비밀번호를 입력해주세요."
+        uPw.focus();
     } else if (uPw.value == uPwChk.value) {
         msg_pwChk.innerHTML = "✓동일한 비밀번호를 입력해주세요.";
         msg_pwChk.style.color = "#0f851a"
@@ -126,7 +131,7 @@ function fnChk_Pw02() {
         msg_pwChk.innerHTML = " X 동일한 비밀번호를 입력해주세요.";
         msg_pwChk.style.color = "#b3130b"
     }
-
+    return true;
 }
 
 //이메일 중복확인
@@ -141,17 +146,26 @@ function fnEmailChk() {
 
     if (emailChk_val == "") {
         alert("이메일을 입력해주세요.")
+        emailChk_val.focus();
     }
     else if (atSignIdx < 0 || atSignIdx < 1 || dotSignIdx < 0 || atSignIdx > dotSignIdx) {
         alert("잘못된 이메일 형식입니다.")
     } else {
         alert("사용이 가능합니다.")
     }
+    chkFlag2 = true;
 }
 
 //휴대폰번호 숫자만 입력가능
 let uNum = document.querySelector("#uNum");
+uNum.addEventListener("keypress", fnNumChk)
 let uNum_chk = /[^0-9]/;
+
+function fnNumChk(event) {
+    if ((event.keyCode < 48) || (event.keyCode > 57))
+        event.returnValue = false;
+}
+
 
 //생년월일
 let ubirth_year = document.querySelector("#ubirth_year");
@@ -182,8 +196,8 @@ function fnBirthChk() {
         birthChk.innerText = "태어난 일을 정확하게 입력해주세요.";
     } else if (ubirth_month !== "월") {
         birthChk.style.display = "none";
-        return true;
     }
+    return true;
 }
 
 //추가입력 사항
@@ -214,9 +228,6 @@ function fnWholeChk() {
     chk_05.checked = chkVal;
     chk_06.checked = chkVal;
     chk_07.checked = chkVal;
-
-
-
 }
 
 //전체동의 해제
@@ -290,11 +301,12 @@ function fnNewsletter_ignor() {
 }
 
 
-
 //joinBtn
 let joinBtn = document.querySelector("#joinBtn");
 joinBtn.addEventListener("click", fnJoin);
-let chkFlag = false;
+let chkFlag1 = false;
+let chkFlag2 = false;
+
 
 function fnJoin() {
     let uId = document.getElementById("uId").value;
@@ -304,23 +316,27 @@ function fnJoin() {
     let uPwChk = document.getElementById("uPwChk").value;
     uPwChk = uPwChk.trim();
     let uName = document.getElementById("uName").value;
-
     uName = uName.trim();
-
     let uEmail = document.getElementById("uEmail").value;
     uEmail = uEmail.trim();
     let uNum = document.getElementById("uNum").value;
     uNum = uNum.trim();
 
+    let require_agree1 = document.getElementById("chk_01").checked;
+    let require_agree2 = document.getElementById("chk_02").checked;
+    let require_agree3 = document.getElementById("chk_07").checked;
+
     // 유효성검사
     if (uId == "") {
         alert("아이디를 입력해주세요.")
         document.getElementById("uId").focus();
-    } else if (chkFlag == false) {
-        alert("아이디 중복확인을 확인해 주세요")
+        fnChk_Id();
+    } else if (chkFlag1 == false) {
+        alert("아이디 중복확인을 확인해 주세요.")
         document.getElementById("uId").focus();
     } else if (uPw == "") {
         alert("비밀번호를 입력해주세요.")
+        fnChk_Pw01();
         document.getElementById("uPw").focus();
     } else if (uPwChk == "") {
         alert("비밀번호를 한번 더 입력해주세요.")
@@ -331,8 +347,16 @@ function fnJoin() {
     } else if (uEmail == "") {
         alert("이메일을 입력해주세요.")
         document.getElementById("uEmail").focus();
+    } else if (chkFlag2 == false) {
+        alert("이메일 중복확인을 확인해 주세요.")
+        document.getElementById("uEmail").focus();
     } else if (uNum == "") {
         alert("휴대폰 인증을 완료 해주세요.")
         document.getElementById("uNum").focus();
+    } else if (!require_agree1 || !require_agree2 || !require_agree3) {
+        alert("필수항목을 체크해주세요.")
+    } else {
+        joinFrm.action = "index.html";
+        joinFrm.submit();
     }
 }
