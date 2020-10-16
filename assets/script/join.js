@@ -101,7 +101,7 @@ function fnChk_Pw01() {
 //             + "<br>" + "<span>･ 동일한 숫자 3개 이상 연속 사용 불가</span>";
 //         msg_pw.style.color = "#b3130b";
 //     }
-}
+// }
 //user passwordCheck innerText
 let uPwChk = document.querySelector("#uPwChk");
 uPwChk.addEventListener("focusin", validationChk_PwChk, { once: true });
