@@ -17,6 +17,10 @@ a {
 ul {
   list-style: none;
 }
+/* sementic 요소 block처리 */
+header, main, section, article,footer {
+  display: block;
+}
 
 /* header영역 */
 header#header {
