@@ -2,6 +2,7 @@
 
 /* main slide show */
 div#mainSlide {
+  width: 1900px;
   height: 370px;
   border-top: 1px solid #eee;
   margin: 0 auto;
@@ -20,6 +21,36 @@ div#mainSlide {
   width: 100%;
   margin: 0 auto;
 }
+
+/* slide show button */
+div#slideBtn {
+  width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#slideBtn button {
+  color: #f7f7f7;
+  width: 52px;
+  height: 52px;
+  font-size: 20px;
+  line-height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: rgba(111, 111, 111, 0.1);
+
+  display: none;
+  cursor: pointer;
+
+  z-index: 999;
+}
+
 
 /* main#main */
 main#main {
