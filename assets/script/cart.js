@@ -59,8 +59,6 @@ function fnGoods_Chk() {
   }
 }
 
-
-
 //상품 수량 조절
 let decrease = document.querySelectorAll(".decrease");
 let increase = document.querySelectorAll(".increase");
@@ -149,3 +147,40 @@ function product_total_price() {
 }
 
 
+// * 천단위 구분 쉼표 적용 시작 *
+// 판매가격 소스
+var priceMoney = $("#price").text().trim();
+$("#price").text(sepComma(priceMoney));
+
+//개수 소스
+var unitPriceMoney = $("#unitPrice_01").text().trim();
+$("#unitPrice_01").text(sepComma(unitPriceMoney));
+
+//총 상품 금액
+var totalPrice = $("#totalPrice").text().trim();
+// alert("totalPrice : " + totalPrice);
+$("#totalPrice").text(sepComma(totalPrice));
+
+// 천단위 구분 함수
+function sepComma(inputMoney) {
+  var pattern = /\B(?=(\d{3})+(?!\d))/g;
+  var res = inputMoney.replace(pattern, ",");
+  return res;
+}
+
+//천단위 구분 쉼표 제거 
+function removeComma(restore) {
+  if (restore.search(',')) {
+    arrComma = restore.split(',');
+    for (i = 0; ; i++) {
+      if (!arrComma[i]) break;
+
+      if (i == 0) {
+        restore = arrComma[i];
+      } else {
+        restore = restore + arrComma[i];
+      }
+    }
+  }
+  return restore;
+}

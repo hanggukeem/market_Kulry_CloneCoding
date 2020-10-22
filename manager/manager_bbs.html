@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
+    <link rel="stylesheet" href="style/manager_bbs.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script defer src="script/manager_index.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <a href="../index.html"><img src="../assets/images/header/header_logo_white.png" alt="로고" width="140"></a>
+        </header>
+        <main id="main">
+            <div id="manage_bbs">
+                <ul id="lnb_menu">
+                    <li><a href="manager_member.html"><i class='fas fa-user-alt'></i> 고객관리</a></li>
+                    <li><a href="#"><i class='fas fa-pencil-alt'></i> 게시판 관리</a></li>
+                    <li><a href="#"><i class='fas fa-chart-bar'></i> 통계분석</a></li>
+                    <li><a href="#"><i class='fas fa-star'></i> 프로모션</a></li>
+
+                </ul>
+
+            </div> <!-- div#manage_bbs-->
+            <div id="bbs">
+                <h1>게시판관리</h1>
+                <div id="bbs_search">
+                    <table id="bbs_info">
+                        <tbody>
+                            <tr>
+                                <th>기간</th>
+                                <td colspan="3">
+                                    <ul id="date_search">
+                                        <li><a href="#">오늘</a></li>
+                                        <li><a href="#">3일</a></li>
+                                        <li><a href="#">7일</a></li>
+                                        <li><a href="#">1개월</a></li>
+                                    </ul>
+                                    <div>
+                                        <input type="text" size="5"> ~ <input type="text" size="5">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>게시판 선택</th>
+                                <td colspan="3">
+                                    <select name="" id=""></select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>게시글 찾기</th>
+                                <td>
+                                    <select name="" id=""></select>
+                                    <input type="text">
+                                </td>
+                                <th>첨부파일 여부</th>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        전체보기
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        있음
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        없음
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>답변상태</th>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="answer_condition">
+                                        전체보기
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="answer_condition">
+                                        답변 전
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="answer_condition">
+                                        처리중
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="answer_condition">
+                                        답변완료
+                                    </label>
+                                </td>
+                                <th>댓글 여부</th>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        전체보기
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        있음
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        없음
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="search_btn_Area">
+                        <button type="button" id="searchBtn">검색</button>
+                    </div> <!-- button 영역-->
+                </div> <!-- div#member_search -->
+                <div id="bbs_list">
+                    <h3>전체 게시물 목록</h3>
+                    <div id="bbs_top">
+                        <div id="res_num">
+                            <p>등록된 새 글 <span id="new_write">0</span> 검색결과<span id="res_write">0</span></p>
+                        </div> <!-- div#res_num-->
+                        <div id="option">
+                            <select name="" id="">
+                                <option value="">기본정렬</option>
+                                <option value="">조회수많은순</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">10개씩보기</option>
+                                <option value="">20개씩보기</option>
+                                <option value="">30개씩보기</option>
+                                <option value="">50개씩보기</option>
+                                <option value="">100개씩보기</option>
+                            </select>
+                        </div> <!-- div#option-->
+                    </div>
+                    <div id="optionBtn">
+                        <button type="button">&times; 삭제</button>
+                        <button type="button">공지등록</button>
+                        <button type="button">공지해제</button>
+                        <button type="button">글고정 지정</button>
+                        <button type="button">글고정 해제</button>
+                    </div> <!-- div#optionBtn -->
+                    <table id="search_res_table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox">
+                                </th>
+                                <th>
+                                    번호
+                                </th>
+                                <th>
+                                    분류
+                                </th>
+                                <th>
+                                    제목
+                                </th>
+                                <th>
+                                    답변상태
+                                </th>
+                                <th>
+                                    작성자
+                                </th>
+                                <th>작성일</th>
+                                <th>조회수</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table id="bbs_list_res">
+                        <tbody>
+                            <tr>
+                                <td>검색된 내역이 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- div#member_list-->
+            </div> <!-- div#bbs -->
+        </main>
+    </div>
+
+
+
+</body>
+
+</html>

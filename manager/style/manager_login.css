@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+* {
+  color: #333333;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../../assets/images/header/header_logo.png);
+  background-color: rgba(255,255,255, 0.8);
+  background-blend-mode: lighten;
+}
+
+form {
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main#login_Area {
+  width: 340px;
+  margin: 0 auto;
+}
+
+#login_Area h2 {
+  padding: 20px;
+  text-align: center;
+}
+
+#login_Area input[type="text"],
+input[type="password"] {
+  width: 340px;
+  height: 54px;
+  padding-left: 4px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+
+  margin: 6px 0;
+}
+
+#login_Area input::placeholder {
+  color: #dddddd;
+}
+
+#find_idpw {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#find_idpw label {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* checkbox Custom */
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.container input:checked ~ .checkmark {
+  border: none;
+  background-color: #5f0080;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 4px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(40deg);
+}
+#find_idpw ul {
+  font-size: 12px;
+  list-style: none;
+ 
+  display: flex;
+}
+
+#find_idpw ul li {
+  padding: 0 4px;
+}
+
+#find_idpw ul li a {
+  text-decoration: none;
+}
+
+#find_idpw ul span {
+  font-size: 10px;
+}
+
+#login_Area button {
+  color: #ffffff;
+  width: 340px;
+  height: 54px;
+  font-size: 16px;
+  border: 1px solid #5f0080;
+  border-radius: 2px;
+  margin: 6px 0;
+  background-color: #5f0080;
+
+  cursor: pointer;
+}
+
+#login_Area button#joinBtn {
+  color: #5f0080;
+  background-color: #fff;
+}

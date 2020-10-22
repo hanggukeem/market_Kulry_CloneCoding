@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
+    <link rel="stylesheet" href="style/manager_member.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script defer src="script/manager_index.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <a href="../index.html"><img src="../assets/images/header/header_logo_white.png" alt="로고" width="140"></a>
+        </header>
+        <main id="main">
+            <div id="manage_bbs">
+                <ul id="lnb_menu">
+                    <li><a href="#"><i class='fas fa-user-alt'></i> 고객관리</a></li>
+                    <li><a href="manager_bbs.html"><i class='fas fa-pencil-alt'></i> 게시판 관리</a></li>
+                    <li><a href="#"><i class='fas fa-chart-bar'></i> 통계분석</a></li>
+                    <li><a href="#"><i class='fas fa-star'></i> 프로모션</a></li>
+
+                </ul>
+
+            </div> <!-- div#manage_bbs-->
+            <div id="member_bbs">
+                <h1>고객관리</h1>
+                <div id="member_search">
+                    <table id="member_info">
+                        <tbody>
+                            <tr>
+                                <th>검색어</th>
+                                <td colspan="3">
+                                    <select name="" id=""></select>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주문상품</th>
+                                <td>
+                                    <input type="text">
+                                    <button type="button" id="goods_search">상품검색</button>
+                                </td>
+                                <th>주문금액</th>
+                                <td>
+                                    <input type="text" size="5"> 원 ~
+                                    <input type="text" size="5"> 원
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>가입일</th>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <th>나이</th>
+                                <td>
+                                    <input type="text" size="1"> 세 ~
+                                    <input type="text" size="1"> 세
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>SMS수신</th>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="sms">
+                                        전체
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="sms">
+                                        수신허용
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="sms">
+                                        수신안함
+                                    </label>
+                                </td>
+                                <th>이메일수신</th>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        전체
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        수신허용
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="email">
+                                        수신안함
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="search_btn_Area">
+                        <button type="button" id="searchBtn">검색</button>
+                    </div> <!-- button 영역-->
+                </div> <!-- div#member_search -->
+                <div id="member_list">
+                    <h3>회원목록</h3>
+                    <p>총 회원수 <span id="total_member">0</span> 검색결과<span id="res_member">0</span></p>
+                    <table id="search_res_table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox">
+                                </th>
+                                <th>
+                                    이름
+                                </th>
+                                <th>
+                                    아이디
+                                </th>
+                                <th>
+                                    휴대전화
+                                </th>
+                                <th>
+                                    나이
+                                </th>
+                                <th>
+                                    지역
+                                </th>
+                                <th>메일/SMS/메모</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table id="member_list_res">
+                        <tbody>
+                            <tr>
+                                <td>검색된 내역이 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- div#member_list-->
+            </div> <!-- div#bbs -->
+        </main>
+    </div>
+
+
+
+</body>
+
+</html>

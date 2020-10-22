@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
+    <link rel="stylesheet" href="style/manager_login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="script/manager_login.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <form id="loginFrm">
+            <main id="login_Area">
+                <h2>관리자 로그인</h2>
+                <input type="text" id="userId" placeholder="아이디를 입력해주세요">
+                <input type="password" id="userPw" placeholder="비밀번호를 입력해주세요">
+                <div id="find_idpw">
+                    <label class="container">
+                        <input type="checkbox" checked="checked" />
+                        보안접속
+                        <span class="checkmark"></span>
+                    </label>
+                    <ul>
+                        <li><a href="#">아이디찾기</a></li>
+                        <span>|</span>
+                        <li><a href="#">비밀번호 찾기</a></li>
+                    </ul>
+                </div> <!-- div#find_idpw-->
+
+                <button type="button" id="loginBtn">로그인</button>
+            </main>
+        </form>
+
+    </div> <!-- div#wrap -->
+</body>
+
+</html>

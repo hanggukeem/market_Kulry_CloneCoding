@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+* {
+    color: #333333;
+    font-family: "Noto Sans KR", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header#header */
+header#header {
+    width: 100%;
+    height: 100px;
+    background-color: #5f085f;
+}
+
+#header  {
+    padding-top: 10px;
+    display: inline-block;
+}
+
+/* main#main */
+main#main {
+display: flex;
+}
+
+#main div#manage_bbs {
+    width: 220px;
+    margin-top: 67px;
+    margin-left: 10px;
+}
+#main ul#lnb_menu {
+    width: 200px;
+}
+
+#main ul#lnb_menu li {
+    border: 1px solid #eee;
+}
+
+#main ul#lnb_menu li:not(:first-child) {
+    border-top: none;
+}
+
+#main ul#lnb_menu li a {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+    display: inline-block;
+}
+#main ul#lnb_menu i {
+    color: #5f0855;
+    padding-right: 10px;
+}
+
+#main ul#lnb_menu li:first-child a {
+    color: #5f0855;
+    width: 200px;
+    background-color: #f7f7f7;
+}
+
+div#member_bbs {
+    width: 1600px;
+    margin-right: 10px;
+}
+
+/* 고객검색 */
+
+div#member_bbs {
+    padding-left: 20px;
+}
+
+div#member_bbs h1 {
+    padding: 10px 0;
+}
+
+
+div#member_search table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+#member_search table#member_info th {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 6px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+
+#member_search table#member_info td {
+font-size: 12px;
+padding-left: 6px;
+border: 1px solid #ddd;
+}
+
+#member_search table#member_info input, select {
+    padding: 4px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+#member_search table#member_info label {
+    margin-right: 8px;
+}
+
+div#search_btn_Area {
+    width: 100%;
+    text-align: center;
+}
+
+button#goods_search {
+    color: #888888;
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-left: 4px;
+}
+
+button#searchBtn {
+    color: #5f085f;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #5f085f;
+    outline: none;
+    margin-top: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button#searchBtn:hover {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #5f085f;
+}
+
+
+/* 고객검색결과 테이블 */
+
+#member_bbs table#search_res_table {
+    width: 100%;
+    font-size: 12px;
+    border-top:1px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    border-collapse: collapse;
+    background-color: #f7f7f7;
+}
+
+div#member_list p {
+    font-size: 12px;
+}
+
+div#member_list p span {
+    color: #ff0000;
+}
+
+#search_res_table thead tr th {
+    height: 40px;
+}
+
+#member_list table#member_list_res  {
+    width: 100%;
+    font-size: 12px;
+}
+
+#member_list table#member_list_res  td {
+    height: 100px;
+    text-align: center;
+}
+
+
