@@ -119,6 +119,12 @@ table#bbs_info tr:first-child td div {
     left: 200px;
 }
 
+table#bbs_info tr:first-child td div i {
+    color: #888;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 
 #bbs_search table#bbs_info ul#date_search {
     width: 160px;
@@ -148,6 +154,8 @@ table#bbs_info ul#date_search li:not(:first-child) a {
     border: 1px solid #ddd;
     outline: none;
 }
+
+
 
 #bbs_search table#bbs_info label {
     margin-right: 8px;

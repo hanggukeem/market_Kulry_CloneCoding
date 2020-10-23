@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+
+nav#header_lnb ul#user_lnb > li:last-child > a {
+color: #5f0080;
+font-weight: bold;
+margin-left: 10px;
+}
+
 /* main slide show */
 div#mainSlide {
   width: 1900px;
@@ -24,7 +31,8 @@ div#mainSlide {
 
 /* slide show button */
 div#slideBtn {
-  width: 1500px;
+  width: 1400px;
+  /* border: 1px solid #000; */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
