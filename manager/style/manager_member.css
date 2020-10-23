@@ -178,11 +178,31 @@ div#member_list p span {
 #member_list table#member_list_res  {
     width: 100%;
     font-size: 12px;
+    border-collapse: collapse;
 }
 
 #member_list table#member_list_res  td {
-    height: 100px;
-    text-align: center;
+border-bottom: 1px solid #ddd;
+text-align: center;
+height: 30px;
 }
 
+#member_list table#member_list_res td:first-child {
+    width: 60px;
+} 
 
+#member_list table#member_list_res td:nth-child(2) {
+    width: 111px;
+}
+
+#member_list table#member_list_res td:nth-child(3) {
+    width: 164px;
+}
+
+#member_list table#member_list_res td:nth-child(4) {
+    width: 218px;
+}
+
+#member_list table#member_list_res td:nth-child(5) {
+    width: 111px;
+}
