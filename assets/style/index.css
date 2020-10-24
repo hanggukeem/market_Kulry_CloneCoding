@@ -1,10 +1,11 @@
 @charset "utf-8";
 
-
 nav#header_lnb ul#user_lnb > li:last-child > a {
-color: #5f0080;
-font-weight: bold;
-margin-left: 10px;
+  color: #5f0080;
+  font-weight: bold;
+  margin-left: 6px;
+  position: absolute;
+  right: 20px;
 }
 
 /* main slide show */
@@ -31,14 +32,13 @@ div#mainSlide {
 
 /* slide show button */
 div#slideBtn {
-  width: 1400px;
-  /* border: 1px solid #000; */
-  margin: 0 auto;
+  width: 1050px;
+  /* margin: 0 auto; */
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: relative;
   top: 50%;
-  left: 50%;
+  left: 36%;
   transform: translate(-50%, -50%);
 }
 
@@ -52,13 +52,11 @@ div#slideBtn button {
   outline: none;
   border-radius: 50%;
   background-color: rgba(111, 111, 111, 0.1);
-
   display: none;
-  cursor: pointer;
-
   z-index: 999;
-}
 
+  cursor: pointer;
+}
 
 /* main#main */
 main#main {

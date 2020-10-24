@@ -356,7 +356,7 @@ function fnJoin() {
     } else if (!require_agree1 || !require_agree2 || !require_agree3) {
         alert("필수항목을 체크해주세요.")
     } else {
-        joinFrm.action = "index.html";
+        joinFrm.action = "../index.html";
         joinFrm.submit();
     }
 }

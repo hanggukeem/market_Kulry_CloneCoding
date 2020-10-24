@@ -18,7 +18,11 @@ ul {
   list-style: none;
 }
 /* sementic 요소 block처리 */
-header, main, section, article,footer {
+header,
+main,
+section,
+article,
+footer {
   display: block;
 }
 
@@ -71,7 +75,7 @@ ul#user_lnb ul#user_lnbSub {
   position: absolute;
   top: 42px;
   display: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 ul#user_lnb ul#user_lnbSub > li {
@@ -80,10 +84,10 @@ ul#user_lnb ul#user_lnbSub > li {
 
 div#headerLogo {
   width: 500px;
-  height: 60px;
+  height: 50px;
   text-align: center;
   /* border: 1px solid #000; */
-  margin: 0 auto;
+  margin: 10px auto;
   position: relative;
   top: -20px;
 
@@ -288,10 +292,13 @@ div#mainSlide {
 }
 
 /* side menu */
+div#quick_menuArea {
+  position: relative;
+}
 div#quick_lnb {
   position: absolute;
   right: 20px;
-  top: 540px;
+  top: 300px;
 }
 
 #quick_lnb ul#quick_menu {
@@ -477,13 +484,15 @@ div#membership {
   border-radius: 50%;
   outline: none;
 
-  background-color: ;
-
   position: absolute;
   right: -50px;
   top: -50px;
 
   cursor: pointer;
+}
+
+#membership div#popup button i {
+  text-align: center;
 }
 
 #membership div#popup img {

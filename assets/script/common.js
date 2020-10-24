@@ -66,13 +66,18 @@ function fnGnbSticky() {
 // Quick menu
 let currentPosition = parseInt($("#quick_lnb").css("top"));
 $(window).scroll(function () {
+  if ($(this).scrollTop() > 200) {
+    $("#quick_lnb").fadeIn();
+  } else {
+    $("#quick_lnb").fadeOut();
+  }
   let position = $(window).scrollTop();
-  $("#quick_lnb").stop().animate({ "top": position + currentPosition + "px" }, 1000);
+  $("#quick_lnb").stop().animate({ "top": position - currentPosition + "px" }, 1000);
 });
 
 //페이지상단이동
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 500) {
+  if ($(this).scrollTop() > 380) {
       $('#pageTop').fadeIn();
   } else {
       $('#pageTop').fadeOut();

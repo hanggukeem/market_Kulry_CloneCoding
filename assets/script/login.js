@@ -14,7 +14,7 @@ function fnLogin() {
     if (userId == "" || userPw == "") {
         alert("아이디와 비밀번호를 입력해주세요")
     } else {
-        loginFrm.action = "index.html";
+        loginFrm.action = "../index.html";
         loginFrm.submit();
     }
 }
