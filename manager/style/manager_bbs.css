@@ -155,7 +155,13 @@ table#bbs_info ul#date_search li:not(:first-child) a {
     outline: none;
 }
 
-
+img.ui-datepicker-trigger {
+    width: 18px;
+    height: 20px;
+    line-height: 29px;
+    padding-top: 4px;
+    margin-left: 4px;
+}
 
 #bbs_search table#bbs_info label {
     margin-right: 8px;
@@ -194,9 +200,10 @@ button#searchBtn:hover {
 }
 
 
-/* 고객검색결과 테이블 */
+/* 게시글검색결과 테이블 */
 
 div#bbs_list {
+    
     margin-top: 20px;
 }
 
@@ -236,6 +243,10 @@ div#bbs_list p span {
     color: #ff0000;
 }
 
+#search_res_table thead {
+    width: 100%;
+}
+
 #search_res_table thead tr th {
     height: 40px;
 }
@@ -245,8 +256,48 @@ div#bbs_list p span {
     font-size: 12px;
 }
 
-#bbs_list table#bbs_list_res  td {
-    height: 100px;
+#bbs_list table#bbs_list_res tr td {
+    height: 40px;
+    /* display: flex; */
+    flex-wrap : nowrap;
+}
+
+#bbs_list table#bbs_list_res tr td.chkbox, th.chkbox {
+    width: 60px;
+    text-align: center;
+} 
+
+#bbs_list table#bbs_list_res tr td.bbsNum, th.bbsNum{
+    width: 130px;
+    text-align: center;
+}
+
+#bbs_list table#bbs_list_res tr td.select_title , th.select_title {
+    width: 150px;
+    text-align: center;
+}
+
+#bbs_list table#bbs_list_res tr td.title, th.title{
+    width: 400px;
+} 
+
+#bbs_list table#bbs_list_res tr td.answer_condition, th.answer_condition{
+    width: 80px;
+    text-align: center;
+} 
+
+#bbs_list table#bbs_list_res tr td.writer , th.writer {
+    width: 150px;
+    text-align: center;
+}
+
+#bbs_list table#bbs_list_res tr td.write_date , th.write_date {
+    width: 150px;
+    text-align: center;
+}
+
+#bbs_list table#bbs_list_res tr td.hits , th.hits {
+    width: 150px;
     text-align: center;
 }
 

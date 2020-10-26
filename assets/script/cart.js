@@ -99,6 +99,7 @@ for (let i = 0; i < decrease.length; i++) {
         selectChk[i].checked = true;
         whole_Chk.checked = true;
       }
+
     }
     goodsPrice[0].innerText = sepComma(goodsPrice[0].innerText);
     goodsPrice[1].innerText = sepComma(goodsPrice[1].innerText);
@@ -119,7 +120,7 @@ function product_total_price() {
     goodsPrice[1].innerText = removeComma(goodsPrice[1].innerText);
     total_sum += parseInt(goodsPrice[i].innerText);
     total_price[0].innerText = total_sum;
-    if (total_price[1].innerText >= 30000) {
+    if (total_price[0].innerText >= 30000) {
       delivery_fee.innerText = 0;
     } else {
       delivery_fee.innerText = 3000;
@@ -144,23 +145,29 @@ function product_total_price() {
 // 전체선택 해제, 금액 초기화
 whole_Chk.addEventListener("change", function () {
   let total_price = document.querySelectorAll(".res_price");
+  for (let i = 0; i < total_price.length; i++) {
 
-  if (whole_Chk.checked == true) {
-    product_total_price();
-  } else {
-    total_price[i].innerText = 0;
+    if (whole_Chk.checked == true) {
+      product_total_price();
+    } else {
+      total_price[i].innerText = 0;
+      delivery_fee.innerText = 0;
+    }
   }
 });
 selectChk[i].checked = true;
+
+
 
 // 체크박스 선택에따른 가격 변동
 priceChk();
 function priceChk() {
   let total_price = document.querySelectorAll(".res_price");
-
+  let delivery_fee = document.querySelector("#delivery_fee");
+  delivery_fee = removeComma(delivery_fee.innerText)
   for (let i = 0; i < selectChk.length; i++) {
     selectChk[i].addEventListener("change", function () {
-      let delivery_fee = 3000;
+
       total_price[0].innerText = 0;
       total_price[1].innerText = 0;
 
@@ -170,21 +177,27 @@ function priceChk() {
       else if (selectChk[0].checked == false) {
         total_price[0].innerText = goodsPrice[1].innerText;
         goodsPrice[1].innerText = removeComma(goodsPrice[1].innerText)
-        total_price[1].innerText = parseInt(goodsPrice[1].innerText) + delivery_fee;
+        total_price[0].innerText = removeComma(total_price[0].innerText)
+        total_price[1].innerText = parseInt(total_price[0].innerText) + parseInt(delivery_fee);
+
+        total_price[0].innerText = sepComma(total_price[0].innerText);
         total_price[1].innerText = sepComma(total_price[1].innerText);
         goodsPrice[1].innerText = sepComma(goodsPrice[1].innerText);
       }
       else if (selectChk[1].checked == false) {
         total_price[0].innerText = goodsPrice[0].innerText;
         goodsPrice[0].innerText = removeComma(goodsPrice[0].innerText);
-        total_price[0].innerText = parseInt(goodsPrice[0].innerText) + delivery_fee;
+        total_price[0].innerText = removeComma(total_price[0].innerText)
+
+        total_price[1].innerText = parseInt(goodsPrice[0].innerText) + parseInt(delivery_fee);
+        total_price[1].innerText = sepComma(total_price[1].innerText);
         total_price[0].innerText = sepComma(total_price[0].innerText);
         goodsPrice[0].innerText = sepComma(goodsPrice[0].innerText);
       } else if (selectChk[0].checked && selectChk[1].checked) {
         goodsPrice[0].innerText = removeComma(goodsPrice[0].innerText);
         goodsPrice[1].innerText = removeComma(goodsPrice[1].innerText);
         total_price[0].innerText = parseInt(goodsPrice[0].innerText) + parseInt(goodsPrice[1].innerText);
-        total_price[1].innerText = parseInt(goodsPrice[0].innerText) + parseInt(goodsPrice[1].innerText) + delivery_fee;
+
         total_price[0].innerText = sepComma(total_price[0].innerText);
         total_price[1].innerText = sepComma(total_price[1].innerText);
         goodsPrice[0].innerText = sepComma(goodsPrice[0].innerText);

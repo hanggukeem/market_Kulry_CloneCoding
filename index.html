@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/style/common.css">
     <link rel="stylesheet" href="assets/style/index.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="assets/script/common.js"></script>
     <script defer src="assets/script/index.js"></script>
@@ -328,7 +330,7 @@
         </header>
 
         <div id="mainSlide">
-            <div id="slideFrame_main">
+            <div id="slideFrame_main" class="slides">
                 <a href="#"><img src="assets/images/main/slideshow_01.png" alt="메인슬라이드" /></a>
                 <a href="#"><img src="assets/images/main/slideshow_02.png" alt="메인슬라이드" /></a>
                 <a href="#"><img src="assets/images/main/slideshow_03.png" alt="메인슬라이드" /></a>
@@ -337,17 +339,13 @@
                 <a href="#"><img src="assets/images/main/slideshow_06.png" alt="메인슬라이드" /></a>
             </div>
             <!-- div#slideFrame_main-->
-            <div id="slideBtn">
-                    <button type="button" id="slide_left">＜</button>
-                    <button type="button" id="slide_right">＞</button>
-            </div> <!-- div#slideBtn-->
         </div>
         <!--div#mainSlide-->
         <div id="quick_menuArea">
             <div id="quick_lnb">
-                    <a href="notice.html">
-                        <img src="assets/images/main/banner.jpg" alt="배너">
-                    </a>
+                <a href="notice.html">
+                    <img src="assets/images/main/banner.jpg" alt="배너">
+                </a>
                 <ul id="quick_menu">
                     <li><a href="#" id="membership_popup">등급별 혜택</a></li>
                     <li><a href="#">레시피</a></li>

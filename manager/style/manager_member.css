@@ -187,22 +187,30 @@ text-align: center;
 height: 30px;
 }
 
-#member_list table#member_list_res td:first-child {
+#member_list table#member_list_res td.chkbox, th.chkbox {
     width: 60px;
 } 
 
-#member_list table#member_list_res td:nth-child(2) {
-    width: 111px;
+#member_list table#member_list_res td.name, th.name {
+    width: 150px;
 }
 
-#member_list table#member_list_res td:nth-child(3) {
-    width: 164px;
+#member_list table#member_list_res td.userId, th.userId {
+    width: 150px;
 }
 
-#member_list table#member_list_res td:nth-child(4) {
-    width: 218px;
+#member_list table#member_list_res td.phoneNum, th.phoneNum {
+    width: 200px;
 }
 
-#member_list table#member_list_res td:nth-child(5) {
-    width: 111px;
+#member_list table#member_list_res td.age, th.age {
+    width: 80px;
+}
+
+#member_list table#member_list_res td.address, th.address {
+    width: 100px;
+}
+
+#member_list table#member_list_res td.memo, th.memo {
+    width: 200px;
 }

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
     <link rel="stylesheet" href="style/manager_bbs.css">
+    <link rel="stylesheet" href="style/jquery-ui.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script defer src="script/manager_bbs.js"></script>
 </head>
@@ -41,7 +44,10 @@
                                         <li><a href="#">1개월</a></li>
                                     </ul>
                                     <div>
-                                        <input type="text" size="5"> <i class='far fa-calendar-alt'></i> ~ <input type="text" size="5"> <i class='far fa-calendar-alt'></i>
+                                        <input type="text" size="5" class="datepicker">
+                                        <!-- <i class='far fa-calendar-alt'></i>  -->
+                                        ~ <input type="text" size="5" class="datepicker">
+                                        <!-- <i class='far fa-calendar-alt' id="datepicker_02"></i> -->
                                     </div>
                                 </td>
                             </tr>
@@ -145,33 +151,164 @@
                     <table id="search_res_table">
                         <thead>
                             <tr>
-                                <th>
+                                <th class="chkbox">
                                     <input type="checkbox">
                                 </th>
-                                <th>
+                                <th class="bbsNum">
                                     번호
                                 </th>
-                                <th>
+                                <th class="select_title">
                                     분류
                                 </th>
-                                <th>
+                                <th class="title">
                                     제목
                                 </th>
-                                <th>
+                                <th class="answer_condition">
                                     답변상태
                                 </th>
-                                <th>
+                                <th class="writer">
                                     작성자
                                 </th>
-                                <th>작성일</th>
-                                <th>조회수</th>
+                                <th class="write_date">
+                                    작성일
+                                </th>
+                                <th class="hits">
+                                    조회수
+                                </th>
                             </tr>
                         </thead>
                     </table>
                     <table id="bbs_list_res">
                         <tbody>
                             <tr>
-                                <td>검색된 내역이 없습니다.</td>
+                                <td class="chkbox">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="bbsNum">
+                                    5
+                                </td>
+                                <td class="select_title">
+                                    공지사항
+                                </td>
+                                <td class="title">
+                                    [마켓컬리]지역별 배송안내
+                                </td>
+                                <td class="answer_condition">
+                                    -
+                                </td>
+                                <td class="writer">
+                                    운영자
+                                </td>
+                                <td class="write_date">
+                                    2020-10-23
+                                </td>
+                                <td class="hits">
+                                    100
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="chkbox">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="bbsNum">
+                                    4
+                                </td>
+                                <td class="select_title">
+                                    공지사항
+                                </td>
+                                <td class="title">
+                                    [마켓컬리]품절항목 안내
+                                </td>
+                                <td class="answer_condition">
+                                    -
+                                </td>
+                                <td class="writer">
+                                    운영자
+                                </td>
+                                <td class="write_date">
+                                    2020-10-22
+                                </td>
+                                <td class="hits">
+                                    55
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="chkbox">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="bbsNum">
+                                    3
+                                </td>
+                                <td class="select_title">
+                                    공지사항
+                                </td>
+                                <td class="title">
+                                    [가격인상공지]하겐다즈 크런치콘 바닐라 캐러멜 아몬드 외 27건
+                                </td>
+                                <td class="answer_condition">
+                                    -
+                                </td>
+                                <td class="writer">
+                                    운영자
+                                </td>
+                                <td class="write_date">
+                                    2020-10-03
+                                </td>
+                                <td class="hits">
+                                    90
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="chkbox">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="bbsNum">
+                                    2
+                                </td>
+                                <td class="select_title">
+                                    공지사항
+                                </td>
+                                <td class="title">
+                                    [마켓컬리] 유기농 제주 목초 우유 성분 분석 결과 공지
+                                </td>
+                                <td class="answer_condition">
+                                    -
+                                </td>
+                                <td class="writer">
+                                    운영자
+                                </td>
+                                <td class="write_date">
+                                    2020-10-02
+                                </td>
+                                <td class="hits">
+                                    88
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="chkbox">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="bbsNum">
+                                    1
+                                </td>
+                                <td class="select_title">
+                                    공지사항
+                                </td>
+                                <td class="title">
+                                    [추석연휴] 배송 휴무 안내
+                                </td>
+                                <td class="answer_condition">
+                                    -
+                                </td>
+                                <td class="writer">
+                                    운영자
+                                </td>
+                                <td class="write_date">
+                                    2020-09-22
+                                </td>
+                                <td class="hits">
+                                    123
+                                </td>
                             </tr>
                         </tbody>
                     </table>

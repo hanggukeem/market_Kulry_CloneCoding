@@ -31,18 +31,19 @@ div#mainSlide {
 }
 
 /* slide show button */
-div#slideBtn {
+div.tns-controls {
   width: 1050px;
+  height: 50px;
   /* margin: 0 auto; */
+  border: 1px solid #000;
   display: flex;
   justify-content: space-between;
-  position: relative;
-  top: 50%;
-  left: 36%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 40%;
+  left: 22%;
 }
 
-div#slideBtn button {
+div.tns-controls>button {
   color: #f7f7f7;
   width: 52px;
   height: 52px;
@@ -51,11 +52,19 @@ div#slideBtn button {
   border: none;
   outline: none;
   border-radius: 50%;
-  background-color: rgba(111, 111, 111, 0.1);
-  display: none;
+  background-color: rgba(111, 111, 111, 0.3);
+  /* display: none; */
   z-index: 999;
 
   cursor: pointer;
+}
+
+div.tns-nav {
+  display:none;
+}
+
+div.tns-outer button[data-action] {
+  display: none;
 }
 
 /* main#main */
