@@ -34,16 +34,17 @@ div#mainSlide {
 div.tns-controls {
   width: 1050px;
   height: 50px;
-  /* margin: 0 auto; */
-  border: 1px solid #000;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 40%;
-  left: 22%;
-}
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 10;
+ }
 
-div.tns-controls>button {
+div.tns-controls > button {
   color: #f7f7f7;
   width: 52px;
   height: 52px;
@@ -60,7 +61,7 @@ div.tns-controls>button {
 }
 
 div.tns-nav {
-  display:none;
+  display: none;
 }
 
 div.tns-outer button[data-action] {
